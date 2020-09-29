@@ -22,6 +22,12 @@ let Merek = sprites.create(img`
     . . . f . . . . . . . f . . . .
     . . . . . . . . . . . . . . . .
 `)
-scene.setBackgroundColor(3)
+scene.setBackgroundColor(0)
 info.setLife(3)
+controller.moveSprite(Merek)
 tiles.setTilemap(tilemap`level`)
+scene.cameraFollowSprite(Merek)
+Merek.ay = 150
+controller.player1.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Pressed, function on_button_event_a_pressed() {
+    Merek.vy = -75
+})
