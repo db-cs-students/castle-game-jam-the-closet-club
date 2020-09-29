@@ -23,11 +23,11 @@ Merek = sprites.create(img("""
 """))
 scene.set_background_color(0)
 info.set_life(3)
-controller.move_sprite(Merek)
 scene.camera_follow_sprite(Merek)
+controller.move_sprite(Merek, vy= 0)
 Merek.ay = 150
 def on_button_event_a_pressed():
-    Merek.vy = -75
+    Merek.vy = -97
 controller.player1.on_button_event(ControllerButton.A, ControllerButtonEvent.PRESSED, on_button_event_a_pressed)
 scene.set_tile_map(img("""
     cccccccc........................................
@@ -55,3 +55,41 @@ scene.set_tile_map(img("""
     cccccccccccccccccccccabbbecc....................
     cccccccccccccccccccccccccccc....................
 """))
+scene.set_tile(11, img("""
+    b b b b b b b b b b b b b b b b
+    b c c c c c c c b c c c c c c c
+    b c c c c c c c b c c c c c c c
+    b c c c c c c c b c c c c c c c
+    b b b b b b b b b b b b b b b b
+    c c c c c b c c c c c c b c c c
+    c c c c c b c c c c c c b c c c
+    c c c c c b c c c c c c b c c c
+    b b b b b b b b b b b b b b b b
+    b c c c c c c c b c c c c c c c
+    b c c c c c c c b c c c c c c c
+    b c c c c c c c b c c c c c c c
+    b b b b b b b b b b b b b b b b
+    c c c c c b c c c c c c b c c c
+    c c c c c b c c c c c c b c c c
+    c c c c c b c c c c c c b c c c
+"""),True)
+scene.set_tile(12, img("""
+    c c c c c c c c c c c c c c c c
+    c c c c c c c c c c c c c c c c
+    c c c c c c c c c c c c c c c c
+    c c c c c c c c c c c c c c c c
+    c c c c c c c c c c c c c c c c
+    c c c c c c c c c c c c c c c c
+    c c c c c c c c c c c c c c c c
+    c c c c c c c c c c c c c c c c
+    c c c c c c c c c c c c c c c c
+    c c c c c c c c c c c c c c c c
+    c c c c c c c c c c c c c c c c
+    c c c c c c c c c c c c c c c c
+    c c c c c c c c c c c c c c c c
+    c c c c c c c c c c c c c c c c
+    c c c c c c c c c c c c c c c c
+    c c c c c c c c c c c c c c c c
+"""),True)
+
+tiles.place_on_tile(Merek, tiles.get_tile_location(2, 19))

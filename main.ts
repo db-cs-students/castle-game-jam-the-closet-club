@@ -24,11 +24,11 @@ let Merek = sprites.create(img`
 `)
 scene.setBackgroundColor(0)
 info.setLife(3)
-controller.moveSprite(Merek)
 scene.cameraFollowSprite(Merek)
+controller.moveSprite(Merek, 100, 0)
 Merek.ay = 150
 controller.player1.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Pressed, function on_button_event_a_pressed() {
-    Merek.vy = -75
+    Merek.vy = -97
 })
 scene.setTileMap(img`
     cccccccc........................................
@@ -56,3 +56,40 @@ scene.setTileMap(img`
     cccccccccccccccccccccabbbecc....................
     cccccccccccccccccccccccccccc....................
 `)
+scene.setTile(11, img`
+    b b b b b b b b b b b b b b b b
+    b c c c c c c c b c c c c c c c
+    b c c c c c c c b c c c c c c c
+    b c c c c c c c b c c c c c c c
+    b b b b b b b b b b b b b b b b
+    c c c c c b c c c c c c b c c c
+    c c c c c b c c c c c c b c c c
+    c c c c c b c c c c c c b c c c
+    b b b b b b b b b b b b b b b b
+    b c c c c c c c b c c c c c c c
+    b c c c c c c c b c c c c c c c
+    b c c c c c c c b c c c c c c c
+    b b b b b b b b b b b b b b b b
+    c c c c c b c c c c c c b c c c
+    c c c c c b c c c c c c b c c c
+    c c c c c b c c c c c c b c c c
+`, true)
+scene.setTile(12, img`
+    c c c c c c c c c c c c c c c c
+    c c c c c c c c c c c c c c c c
+    c c c c c c c c c c c c c c c c
+    c c c c c c c c c c c c c c c c
+    c c c c c c c c c c c c c c c c
+    c c c c c c c c c c c c c c c c
+    c c c c c c c c c c c c c c c c
+    c c c c c c c c c c c c c c c c
+    c c c c c c c c c c c c c c c c
+    c c c c c c c c c c c c c c c c
+    c c c c c c c c c c c c c c c c
+    c c c c c c c c c c c c c c c c
+    c c c c c c c c c c c c c c c c
+    c c c c c c c c c c c c c c c c
+    c c c c c c c c c c c c c c c c
+    c c c c c c c c c c c c c c c c
+`, true)
+tiles.placeOnTile(Merek, tiles.getTileLocation(2, 19))
