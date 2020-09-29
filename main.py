@@ -23,4 +23,4 @@ Merek = sprites.create(img("""
 """))
 scene.set_background_color(3)
 info.set_life(3)
-tiles.set_tilemap(tilemap(""" """))
+tiles.set_tilemap(tilemap("""level"""))

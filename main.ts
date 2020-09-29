@@ -24,4 +24,4 @@ let Merek = sprites.create(img`
 `)
 scene.setBackgroundColor(3)
 info.setLife(3)
-tiles.setTilemap(tilemap` `)
+tiles.setTilemap(tilemap`level`)
