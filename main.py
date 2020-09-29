@@ -27,7 +27,7 @@ scene.camera_follow_sprite(Merek)
 controller.move_sprite(Merek, vy= 0)
 Merek.ay = 150
 def on_button_event_a_pressed():
-    Merek.vy = -97
+    Merek.vy = -100
 controller.player1.on_button_event(ControllerButton.A, ControllerButtonEvent.PRESSED, on_button_event_a_pressed)
 scene.set_tile_map(img("""
     cccccccc........................................

@@ -28,7 +28,7 @@ scene.cameraFollowSprite(Merek)
 controller.moveSprite(Merek, 100, 0)
 Merek.ay = 150
 controller.player1.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Pressed, function on_button_event_a_pressed() {
-    Merek.vy = -97
+    Merek.vy = -100
 })
 scene.setTileMap(img`
     cccccccc........................................
