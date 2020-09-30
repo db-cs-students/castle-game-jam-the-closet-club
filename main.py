@@ -20,11 +20,11 @@ Merek = sprites.create(img("""
     . . . f f . . . . f f f . . . .
     . . . f . . . . . . . f . . . .
     . . . . . . . . . . . . . . . .
-"""))
+"""), SpriteKind.player)
 scene.set_background_color(0)
 info.set_life(3)
 scene.camera_follow_sprite(Merek)
-controller.move_sprite(Merek, vy= 0)
+controller.move_sprite(Merek, 75, 0)
 Merek.ay = 150
 def on_button_event_a_pressed():
     Merek.vy = -100
@@ -56,8 +56,8 @@ scene.set_tile_map(img("""
     cccccccccccccccccccccccccccc....................
 """))
 scene.set_tile(11, img("""
-    b b b b b b b b b b b b b b b b
-    b c c c c c c c b c c c c c c c
+    d d d d d d d d d d d d d d d d
+    d c c c c c c c d c c c c c c c
     b c c c c c c c b c c c c c c c
     b c c c c c c c b c c c c c c c
     b b b b b b b b b b b b b b b b
@@ -74,22 +74,70 @@ scene.set_tile(11, img("""
     c c c c c b c c c c c c b c c c
 """),True)
 scene.set_tile(12, img("""
-    c c c c c c c c c c c c c c c c
-    c c c c c c c c c c c c c c c c
-    c c c c c c c c c c c c c c c c
-    c c c c c c c c c c c c c c c c
-    c c c c c c c c c c c c c c c c
-    c c c c c c c c c c c c c c c c
-    c c c c c c c c c c c c c c c c
-    c c c c c c c c c c c c c c c c
-    c c c c c c c c c c c c c c c c
-    c c c c c c c c c c c c c c c c
-    c c c c c c c c c c c c c c c c
-    c c c c c c c c c c c c c c c c
-    c c c c c c c c c c c c c c c c
-    c c c c c c c c c c c c c c c c
-    c c c c c c c c c c c c c c c c
-    c c c c c c c c c c c c c c c c
+    b b b b b b b b b b b b b b b b
+    b c c c c c c c b c c c c c c c
+    b c c c c c c c b c c c c c c c
+    b c c c c c c c b c c c c c c c
+    b b b b b b b b b b b b b b b b
+    c c c c b c c c c c c c b c c c
+    c c c c b c c c c c c c b c c c
+    c c c c b c c c c c c c b c c c
+    b b b b b b b b b b b b b b b b
+    b c c c c c c c b c c c c c c c
+    b c c c c c c c b c c c c c c c
+    b c c c c c c c b c c c c c c c
+    b b b b b b b b b b b b b b b b
+    c c c c b c c c c c c c b c c c
+    c c c c b c c c c c c c b c c c
+    c c c c b c c c c c c c b c c c
+"""),True)
+scene.set_tile(14, img("""
+    d d d d b b b b b b b b b b b b
+    d c c c c c c c b c c c c c c c
+    b c c c c c c c b c c c c c c c
+    b c c c c c c c b c c c c c c c
+    b b b b b b b b b b b b b b b b
+    c c c c b c c c c c c c b c c c
+    c c c c b c c c c c c c b c c c
+    c c c c b c c c c c c c b c c c
+    b b b b b b b b b b b b b b b b
+    b c c c c c c c b c c c c c c c
+    b c c c c c c c b c c c c c c c
+    b c c c c c c c b c c c c c c c
+    b b b b b b b b b b b b b b b b
+    c c c c b c c c c c c c b c c c
+    c c c c b c c c c c c c b c c c
+    c c c c b c c c c c c c b c c c
 """),True)
 
 tiles.place_on_tile(Merek, tiles.get_tile_location(2, 19))
+meany = sprites.create(img("""
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . 5 . . . . . . . . . . .
+    . . . 5 5 5 5 . . 5 5 5 . . . .
+    . . 5 5 5 5 5 . . . . . 5 . . .
+    . 5 5 5 5 5 5 5 . . . . . 5 . .
+    . 5 5 5 5 5 . 5 5 . . . . . 5 .
+    . . 5 5 5 . . . . 5 5 . . . 5 .
+    . . . 5 5 . . . . . 5 5 . . 5 .
+    . . . . . . . . . . . 5 5 5 . .
+    . . . . . 5 . . . . . . 5 . . .
+    . . . . 5 . 5 . . . . 5 5 5 . .
+    . . 5 5 . . . 5 5 5 5 . . . 5 .
+    . . 5 5 . . . . . . . . . . 5 .
+    . . . . . . . . . . . . . . . .
+"""), SpriteKind.enemy)
+tiles.place_on_tile(meany, tiles.get_tile_location(6, 19))
+
+# Canjump = True
+# def Canjump():
+#     global Canjump
+#     if Canjump:
+#         Merek.vy = -100
+#         Canjump
+
+def on_overlap(sprite, otherSprite):
+    info.change_life_by(-1)
+sprites.on_overlap(SpriteKind.player, SpriteKind.enemy, on_overlap)
