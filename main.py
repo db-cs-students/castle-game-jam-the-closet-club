@@ -3,29 +3,47 @@ Title: Prison Peril
 Creators: Michael W. and Jason B.
 Description: The guy is doing stuff! oh crap!
 """
+# Merek = sprites.create(img("""
+#     . . . . . . . . . . . . . . . .
+#     . . . . . . . . . . . . . . . .
+#     . . . . f f f f f f f f . . . .
+#     . . . f 4 4 e 4 4 4 4 1 f f . .
+#     . . f f 4 4 4 4 4 4 4 f 4 f . .
+#     . . f 4 1 4 4 4 4 4 e 4 4 f . .
+#     . f e 4 f 4 4 4 4 4 4 4 f . f .
+#     . f f 4 4 4 f f f f 4 f . . f .
+#     . f . f f 4 e 4 4 4 f f . . f .
+#     . f . . f f f f f f f . . . f .
+#     . f . . f f f . f f f . . f . f
+#     f . f f f f f . f f f f . . . .
+#     . . . f f f . . . f f f . . . .
+#     . . . f f . . . . f f f . . . .
+#     . . . f . . . . . . . f . . . .
+#     . . . . . . . . . . . . . . . .
+# """), SpriteKind.player)
 Merek = sprites.create(img("""
-    . . . . . . . . . . . . . . . .
-    . . . . . . . . . . . . . . . .
-    . . . . f f f f f f f f . . . .
-    . . . f 4 4 e 4 4 4 4 1 f f . .
-    . . f f 4 4 4 4 4 4 4 f 4 f . .
-    . . f 4 1 4 4 4 4 4 e 4 4 f . .
-    . f e 4 f 4 4 4 4 4 4 4 f . f .
-    . f f 4 4 4 f f f f 4 f . . f .
-    . f . f f 4 e 4 4 4 f f . . f .
-    . f . . . f f f f f . . . . f .
-    . f . . f f f . f f f . . f . f
-    f . f f f f f . f f f f . . . .
-    . . . f f f . . . f f f . . . .
-    . . . f f . . . . f f f . . . .
-    . . . f . . . . . . . f . . . .
-    . . . . . . . . . . . . . . . .
+    . f f f f f f f f f f f f f f .
+    f d d d d d d d d d d d d d d f
+    f d d f 1 d f f f f f d 1 f d f
+    f d d 1 1 d f 2 2 f d d 1 1 d f
+    . f 4 4 4 4 4 f f 9 4 4 4 4 f .
+    f 4 4 4 4 4 d d 4 9 4 4 4 4 4 .
+    f 4 4 4 4 4 d 4 4 1 4 4 4 4 4 f
+    d d 4 4 f f 4 4 4 4 f f 4 4 d f
+    d d d f . f 4 4 4 4 f . f d d f
+    d d f . . f 4 4 4 d f . f d d f
+    d d f . . f f f f f f . f d d f
+    f f . . . f 4 4 4 4 f . . f d f
+    . . . . . f 4 f f 4 f . . . f .
+    . . . . . f 4 f f 4 f . . . . .
+    . . . . . f 4 f f 4 f . . . . .
+    . . . . . f f f f f f . . . . .
 """), SpriteKind.player)
 scene.set_background_color(0)
 info.set_life(3)
 scene.camera_follow_sprite(Merek)
 controller.move_sprite(Merek, 75, 0)
-Merek.ay = 150
+Merek.ay = 200
 def on_button_event_a_pressed():
     Merek.vy = -100
 controller.player1.on_button_event(ControllerButton.A, ControllerButtonEvent.PRESSED, on_button_event_a_pressed)
