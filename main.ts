@@ -22,24 +22,43 @@ Description: The guy is doing stuff! oh crap!
 //      . . . f . . . . . . . f . . . .
 //      . . . . . . . . . . . . . . . .
 //  """), SpriteKind.player)
-let Merek = sprites.create(img`
+let Merek_right = img`
+    . . . . . . . . . . . . . . . .
+    . . . . . . 1 1 1 1 1 . . . . .
+    . . . . . 1 d d d d d 1 . . . .
+    . . . . . 1 d d f d f 1 . . . .
+    . . . . . 1 d d d d d 1 . . . .
+    . . . . . . 1 1 4 1 1 . . . . .
+    . . . . . 1 4 4 4 4 4 1 . . . .
+    . . . . . 1 4 4 4 4 4 1 . . . .
+    . . . . . 1 4 4 4 4 4 1 . . . .
+    . . . . . 1 4 4 4 4 4 1 . . . .
+    . . . . . 1 d f f f d 1 . . . .
+    . . . . . . 1 4 4 4 1 . . . . .
+    . . . . . . 1 4 1 4 1 . . . . .
+    . . . . . . 1 4 1 4 1 . . . . .
+    . . . . . . 1 4 1 4 1 . . . . .
+    . . . . . 1 e e 1 e e 1 . . . .
+`
+let Merek_left = img`
     . f f f f f f f f f f f f f f .
-    f d d d d d d d d d d d d d d f
-    f d d f 1 d f f f f f d 1 f d f
-    f d d 1 1 d f 2 2 f d d 1 1 d f
-    . f 4 4 4 4 4 f f 9 4 4 4 4 f .
-    f 4 4 4 4 4 d d 4 9 4 4 4 4 4 .
-    f 4 4 4 4 4 d 4 4 1 4 4 4 4 4 f
-    d d 4 4 f f 4 4 4 4 f f 4 4 d f
-    d d d f . f 4 4 4 4 f . f d d f
-    d d f . . f 4 4 4 d f . f d d f
-    d d f . . f f f f f f . f d d f
-    f f . . . f 4 4 4 4 f . . f d f
-    . . . . . f 4 f f 4 f . . . f .
-    . . . . . f 4 f f 4 f . . . . .
-    . . . . . f 4 f f 4 f . . . . .
-    . . . . . f f f f f f . . . . .
-`, SpriteKind.Player)
+    f . . . . . . . . . . . . . . f
+    f . . f 1 . f f f f f . 1 f . f
+    f . . 1 1 . f 2 2 f . . 1 1 . f
+    . f . . . . . f f 9 . . . . f .
+    f . . . . . d d . 9 . . . . . .
+    f . . . . . d . . 1 . . . . . f
+    d d . . . . . . . . . . . . d f
+    d d d f . . . . . . . . f d d f
+    d d f . . . . . . d . . f d d f
+    d d f . . . . . . . . . f d d f
+    f f . . . . . . . . . . . f d f
+    . . . . . . . . . . . . . . f .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+`
+let Merek = sprites.create(Merek_right, SpriteKind.Player)
 scene.setBackgroundColor(0)
 info.setLife(3)
 scene.cameraFollowSprite(Merek)
@@ -69,11 +88,29 @@ scene.setTileMap(img`
     c.d...d............777...777....................................................
     c.....d............ccc999ccc...333..............................................
     c...d..............ccc999ccc...333..............................................
-    abbbbbbbbbbbbbbbbbbecc999ccc...333....c.........................................
-    cccccccccccccccccccccc999cccccccccccccc444444444444444444444444ccccccccccccccccc
-    cccccccccccccccccccccabbbeccccccccccccc444244442224442422422444ccccccccccccccccc
+    abbbbbbbbbbbbbbbbbbecc999ccc...333....b.........................................
+    cccccccccccccccccccccc999ccabbbbbbbbbbe444444444444444444444444bbbbbbbbbbbbbbbbb
+    cccccccccccccccccccccabbbeccccccccccccc222222222222222222222222ccccccccccccccccc
     ccccccccccccccccccccccccccccccccccccccc222222222222222222222222ccccccccccccccccc
 `)
+scene.setTile(10, img`
+    b b b b b b b b b b b b b d d d
+    b c c c c c c c b c c c c c c c
+    b c c c c c c c b c c c c c c c
+    b c c c c c c c b c c c c c c c
+    b b b b b b b b b b b b b b b b
+    c c c c c b c c c c c c b c c c
+    c c c c c b c c c c c c b c c c
+    c c c c c b c c c c c c b c c c
+    b b b b b b b b b b b b b b b b
+    b c c c c c c c b c c c c c c c
+    b c c c c c c c b c c c c c c c
+    b c c c c c c c b c c c c c c c
+    b b b b b b b b b b b b b b b b
+    c c c c c b c c c c c c b c c c
+    c c c c c b c c c c c c b c c c
+    c c c c c b c c c c c c b c c c
+`, true)
 scene.setTile(11, img`
     d d d d d d d d d d d d d d d d
     d c c c c c c c d c c c c c c c
@@ -128,6 +165,44 @@ scene.setTile(14, img`
     c c c c b c c c c c c c b c c c
     c c c c b c c c c c c c b c c c
 `, true)
+scene.setTile(4, img`
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . 4 4 . . 4 4 4 . 4 4 . 4 4 4 .
+    4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+    4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+    4 4 4 4 4 4 4 4 4 4 4 4 2 2 4 4
+    4 2 2 4 4 2 2 4 4 2 2 4 2 2 2 4
+    2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+    2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+    2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+    2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+    2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+`, false)
+scene.onOverlapTile(SpriteKind.Player, img`
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . 4 4 . . 4 4 4 . 4 4 . 4 4 4 .
+    4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+    4 4 4 4 4 4 4 4 4 4 4 4 2 2 4 4
+    4 2 2 4 4 2 2 4 4 2 2 4 2 2 2 4
+    2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+    2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+    2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+    2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+    2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+    2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+`, function on_overlap_tile(sprite: Sprite, location: tiles.Location) {
+    info.player1.changeLifeBy(-1)
+})
 tiles.placeOnTile(Merek, tiles.getTileLocation(2, 19))
 let meany = sprites.create(img`
     . . . . . . . . . . . . . . . .
@@ -156,4 +231,13 @@ tiles.placeOnTile(meany, tiles.getTileLocation(6, 19))
 //          Canjump
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function on_overlap(sprite: Sprite, otherSprite: Sprite) {
     info.changeLifeBy(-1)
+})
+game.onUpdate(function on_update() {
+    Merek.say("" + controller.dx())
+    if (controller.dx() > 0) {
+        Merek.setImage(Merek_right)
+    } else if (controller.dx() < 0) {
+        Merek.setImage(Merek_left)
+    }
+    
 })
