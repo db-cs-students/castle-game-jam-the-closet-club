@@ -401,26 +401,27 @@ scene.onOverlapTile(SpriteKind.Player, img`
 })
 tiles.placeOnTile(Merek, tiles.getTileLocation(2, 19))
 let meany = sprites.create(img`
-    . . . . . . . . . . . . . . . .
-    . . . . . . . . . . . . . . . .
-    . . . . . . . . . . . . . . . .
-    . . . . 5 . . . . . . . . . . .
-    . . . 5 5 5 5 . . 5 5 5 . . . .
-    . . 5 5 5 5 5 . . . . . 5 . . .
-    . 5 5 5 5 5 5 5 . . . . . 5 . .
-    . 5 5 5 5 5 . 5 5 . . . . . 5 .
-    . . 5 5 5 . . . . 5 5 . . . 5 .
-    . . . 5 5 . . . . . 5 5 . . 5 .
-    . . . . . . . . . . . 5 5 5 . .
-    . . . . . 5 . . . . . . 5 . . .
-    . . . . 5 . 5 . . . . 5 5 5 . .
-    . . 5 5 . . . 5 5 5 5 . . . 5 .
-    . . 5 5 . . . . . . . . . . 5 .
-    . . . . . . . . . . . . . . . .
+    . . . . 2 2 2 2 2 2 . . . . . .
+    . . . 2 2 2 2 2 2 2 2 2 . . . .
+    . . 2 2 f 2 2 2 2 2 2 2 2 . . .
+    . . 2 2 2 2 2 2 2 2 2 2 2 . . .
+    . . 2 2 2 2 2 2 2 2 f 2 2 . . .
+    . . . 2 2 f f f 2 2 2 2 2 . . .
+    . . . 2 2 2 2 2 2 2 2 2 . . . .
+    . . . . . 5 2 2 2 5 . . . . . .
+    . . . . 2 2 5 2 5 2 2 . . . . .
+    . . . 2 . 2 2 5 2 2 . 2 . . . .
+    . . . 2 . 2 5 2 5 2 . 2 . . . .
+    . . . 2 . 5 2 2 2 5 . 2 . . . .
+    . . . . . 2 . . . 2 . . . . . .
+    . . . . . 2 . . . 2 . . . . . .
+    . . . . . 2 . . . 2 . . . . . .
+    . . . . . 2 . . . 2 . . . . . .
 `, SpriteKind.Enemy)
 tiles.placeOnTile(meany, tiles.getTileLocation(6, 19))
 tiles.placeOnTile(block, tiles.getTileLocation(33, 18))
 block.ay = 200
+meany.say("Plz dont touch me")
 //  Canjump = True
 //  def Canjump():
 //      global Canjump
@@ -441,10 +442,4 @@ game.onUpdate(function on_update() {
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function on_push(sprite: Sprite, otherSprite: Sprite) {
     otherSprite.setVelocity(10, 0)
-})
-game.onUpdateInterval(500, function on_update_interval() {
-    if (true) {
-        
-    }
-    
 })
