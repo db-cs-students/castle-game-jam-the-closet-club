@@ -57,6 +57,7 @@ Merek_left = img("""
     . . . . . . 1 4 1 4 1 . . . . .
     . . . . . 1 e e 1 e e 1 . . . .
 """)
+# SpriteKind.create(movable) 
 block = sprites.create(img("""
     444444444444444444444444444444444444444444444444444444444444444e
     44444444444444444444444444444444444444444444444444444444444f44ee
@@ -122,7 +123,7 @@ block = sprites.create(img("""
     444eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeefeeeeee
     44eefeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
     4eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-"""))
+"""), SpriteKind.food)
 # scene.place_on_random_tile(block, 3)
 Merek = sprites.create(Merek_right, SpriteKind.player)
 scene.set_background_color(0)
@@ -146,18 +147,18 @@ scene.set_tile_map(img("""
     cccccccc........................................................................
     cccccccc........................................................................
     cccccccc........................................................................
-    cccccccc............................................66666.......................
-    cccccccc........................................................................
-    cccccccc........................................................................
-    cccccccc........................................................................
+    cccccccc...........6666.............................66666.......................
+    cccccccc...........6636.........................................................
+    cccccccc...........6366.........................................................
+    cccccccc...........6666.........................................................
     cccccccc..................................66666666..............................
     c.8...8............777...777....................................................
     c.....6............ccc999ccc....................................................
     c...d..............ccc999ccc....33..............................................
     abbbbbbbbbbbbbbbbbbecc999ccc....33......b.......................................
-    cccccccccccccccccccccc999ccabbbbbbbbbbbbb4444444444444444444444bbbbbbbbbbbbbbbbb
+    cccccccccccccccccccccc999ccabbbbbbbbbbbbe4444444444444444444444bbbbbbbbbbbbbbbbb
     cccccccccccccccccccccabbbeccccccccccccccc2222222222222222222222ccccccccccccccccc
-    cccccccccccccccccccccccccccccccccccccccc22222222222222222222222ccccccccccccccccc
+    ccccccccccccccccccccccccccccccccccccccccc2222222222222222222222ccccccccccccccccc
 """))
 scene.set_tile(10, img("""
     b b b b b b b b b b b b b d d d
@@ -321,6 +322,42 @@ scene.set_tile(9, img("""
     8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8
     8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8
 """))
+scene.set_tile(3, img("""
+    c 6 7 7 7 c c c c c c c c c c c
+    c 6 7 6 b b b b b b b b b b b b
+    c b 6 7 b b b b b b b b b b b b
+    c b b 6 6 7 7 b b b b b b b b b
+    c b b b b 6 6 7 6 b b b b b b b
+    c b b b b b 6 6 6 b b b b b b b
+    c b b b b b b 6 7 7 b b b b b b
+    c b b b b b 6 6 6 6 7 b b b b b
+    c c c c c c 7 6 c c 6 7 7 7 c c
+    b b b b b 7 6 6 c b b 6 6 7 b b
+    b b b b b 7 6 6 c b b b b 6 b b
+    b b b b 7 6 7 6 c b b b b 6 7 b
+    b b b b 6 6 6 7 c b b b b b 7 b
+    b b b b b 6 6 6 c b b b b 7 b b
+    b b 6 6 7 7 7 7 c b b b b b b b
+    b 6 6 7 6 7 b b c b b b b b b b
+"""),False)
+scene.set_tile(6, img("""
+    c c c c c c c c c c c c c c c c
+    c b b b b b b b b b b b b b b b
+    c b b b b b b b b b b b b b b b
+    c b b b b b b b b b b b b b b b
+    c b b b b b b b b b b b b b b b
+    c b b b b b b b b b b b b b b b
+    c b b b b b b b b b b b b b b b
+    c b b b b b b b b b b b b b b b
+    c c c c c c c c c c c c c c c c
+    b b b b b b b b c b b b b b b b
+    b b b b b b b b c b b b b b b b
+    b b b b b b b b c b b b b b b b
+    b b b b b b b b c b b b b b b b
+    b b b b b b b b c b b b b b b b
+    b b b b b b b b c b b b b b b b
+    b b b b b b b b c b b b b b b b
+"""),False)
 def on_overlap_tile(sprite, location):
      info.player1.change_life_by(-1)
 scene.on_overlap_tile(SpriteKind.player, img("""
