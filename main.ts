@@ -125,6 +125,7 @@ let block = sprites.create(img`
     44eefeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
     4eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 `, SpriteKind.Food)
+block.setFlag(SpriteFlag.ShowPhysics, true)
 //  scene.place_on_random_tile(block, 3)
 let Merek = sprites.create(Merek_right, SpriteKind.Player)
 scene.setBackgroundColor(0)
@@ -149,18 +150,18 @@ scene.setTileMap(img`
     cccccccc666666666366666366666636666666666......................66666666666666666
     cccccccc666666666666666666666666666666666......................66666666666666666
     cccccccc663666666666666666666666666666666......................66666666666666666
-    cccccccc666666666666666666666666666666366...........66666......66666666666666666
-    cccccccc666663366666636666666666666666336......................66666666666666666
-    cccccccc666666366666366666663666663666366......................66666666666666666
+    cccccc5c666666666666666666666666666666366...........66666......66666666666666666
+    c5cccccc666663366666636666666666666666336......................66666666666666666
+    cccc5ccc666666366666366666663666663666366......................66666666666666666
     cccccccc666666636666666666666666663666666......................66666666666666666
     cccccccc666666666666666666666666666666666.66666666.............66666666666666666
     c.8...8.666666666667777777776666666666666......................66666666666666666
     c.......6666666666becccccccc6666666666666......................66666666666666666
-    c...d...666666666beccccccccc6666336666636......................66666666666666666
+    c...d...666666666becc5cccccc6666336666636......................66666666666666666
     abbbbbbbbbbbbbbbbecccccccccc666633666666b......................66666666666666666
-    cccccccccccccccccccccccccccabbbbbbbbbbbbe4444444444444444444444bbbbbbbbbbbbbbbbb
-    ccccccccccccccccccccccccccccccccccccccccc2222222222222222222222ccccccccccccccccc
-    ccccccccccccccccccccccccccccccccccccccccc2222222222222222222222ccccccccccccccccc
+    c5cccccccccccccccccccccccccabbbbbbbbbbbbe4444444444444444444444bbbbbbbbbbbbbbbbb
+    cccccc5ccccc5ccccccc5ccccccccc5cccccccccc2222222222222222222222ccccccccccccccccc
+    ccccccccccccccccccccccccccccccccccccccc5c2222222222222222222222ccccccccccccccccc
 `)
 scene.setTile(10, img`
     b b b b b b b b b b b b b d d d
@@ -360,6 +361,24 @@ scene.setTile(6, img`
     b b b b b b b b c b b b b b b b
     b b b b b b b b c b b b b b b b
 `, false)
+scene.setTile(5, img`
+    b b b b b b b b b b b b b b b b
+    b c c c c c c c b c c c c c c c
+    b c c c c c c c b c c c c c c c
+    b c c c c c c c b c c c c c c c
+    b b b b b b b b b b b b b b b b
+    c c c c c b c c c c c c b c c c
+    c c c c c b c c c c c c b c c c
+    c c c c c b c c c c c c b c c c
+    b b b b b b b b b b b b b b b b
+    b c c c c c c c b f f f f f f f
+    b c c c c c c c b f f f f f f f
+    b c c c c c c c b f f f f f f f
+    b b b b b b b b b b b b b b b b
+    c c c c c b c c c c c c b c c c
+    c c c c c b c c c c c c b c c c
+    c c c c c b c c c c c c b c c c
+`, false)
 scene.onOverlapTile(SpriteKind.Player, img`
     . . . . . . . . . . . . . . . .
     . . . . . . . . . . . . . . . .
@@ -422,4 +441,10 @@ game.onUpdate(function on_update() {
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function on_push(sprite: Sprite, otherSprite: Sprite) {
     otherSprite.setVelocity(10, 0)
+})
+game.onUpdateInterval(500, function on_update_interval() {
+    if (true) {
+        
+    }
+    
 })

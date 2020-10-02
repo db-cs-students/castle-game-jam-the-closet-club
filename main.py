@@ -124,6 +124,7 @@ block = sprites.create(img("""
     44eefeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
     4eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 """), SpriteKind.food)
+block.set_flag(SpriteFlag.SHOW_PHYSICS, True)
 # scene.place_on_random_tile(block, 3)
 Merek = sprites.create(Merek_right, SpriteKind.player)
 scene.set_background_color(0)
@@ -148,18 +149,18 @@ scene.set_tile_map(img("""
     cccccccc666666666366666366666636666666666......................66666666666666666
     cccccccc666666666666666666666666666666666......................66666666666666666
     cccccccc663666666666666666666666666666666......................66666666666666666
-    cccccccc666666666666666666666666666666366...........66666......66666666666666666
-    cccccccc666663366666636666666666666666336......................66666666666666666
-    cccccccc666666366666366666663666663666366......................66666666666666666
+    cccccc5c666666666666666666666666666666366...........66666......66666666666666666
+    c5cccccc666663366666636666666666666666336......................66666666666666666
+    cccc5ccc666666366666366666663666663666366......................66666666666666666
     cccccccc666666636666666666666666663666666......................66666666666666666
     cccccccc666666666666666666666666666666666.66666666.............66666666666666666
     c.8...8.666666666667777777776666666666666......................66666666666666666
     c.......6666666666becccccccc6666666666666......................66666666666666666
-    c...d...666666666beccccccccc6666336666636......................66666666666666666
+    c...d...666666666becc5cccccc6666336666636......................66666666666666666
     abbbbbbbbbbbbbbbbecccccccccc666633666666b......................66666666666666666
-    cccccccccccccccccccccccccccabbbbbbbbbbbbe4444444444444444444444bbbbbbbbbbbbbbbbb
-    ccccccccccccccccccccccccccccccccccccccccc2222222222222222222222ccccccccccccccccc
-    ccccccccccccccccccccccccccccccccccccccccc2222222222222222222222ccccccccccccccccc
+    c5cccccccccccccccccccccccccabbbbbbbbbbbbe4444444444444444444444bbbbbbbbbbbbbbbbb
+    cccccc5ccccc5ccccccc5ccccccccc5cccccccccc2222222222222222222222ccccccccccccccccc
+    ccccccccccccccccccccccccccccccccccccccc5c2222222222222222222222ccccccccccccccccc
 """))
 scene.set_tile(10, img("""
     b b b b b b b b b b b b b d d d
@@ -359,6 +360,24 @@ scene.set_tile(6, img("""
     b b b b b b b b c b b b b b b b
     b b b b b b b b c b b b b b b b
 """),False)
+scene.set_tile(5, img("""
+    b b b b b b b b b b b b b b b b
+    b c c c c c c c b c c c c c c c
+    b c c c c c c c b c c c c c c c
+    b c c c c c c c b c c c c c c c
+    b b b b b b b b b b b b b b b b
+    c c c c c b c c c c c c b c c c
+    c c c c c b c c c c c c b c c c
+    c c c c c b c c c c c c b c c c
+    b b b b b b b b b b b b b b b b
+    b c c c c c c c b f f f f f f f
+    b c c c c c c c b f f f f f f f
+    b c c c c c c c b f f f f f f f
+    b b b b b b b b b b b b b b b b
+    c c c c c b c c c c c c b c c c
+    c c c c c b c c c c c c b c c c
+    c c c c c b c c c c c c b c c c
+"""),False)
 def on_overlap_tile(sprite, location):
      info.player1.change_life_by(-1)
 scene.on_overlap_tile(SpriteKind.player, img("""
@@ -424,3 +443,24 @@ game.on_update(on_update)
 def on_push(sprite, otherSprite):
     otherSprite.set_velocity(10, 0)
 sprites.on_overlap(SpriteKind.player, SpriteKind.food, on_push)
+def on_update_interval():
+    if block.x = 60.04 and block.y = 60.04
+    scene.set_tile(1, img("""
+       . . . . . . . . . . . . . . . .
+       . . . . . . . . . . . . . . . .
+       . . . . . . . . . . . . . . . .
+       . . . . . . . . . . . . . . 2 .
+       . . . . . . . . . . . . . . . .
+       . . 2 . . . . . . . . . . . . .
+       . . . . . . . . . . . . . . . .
+       . . . . . . . . . . . . . . 2 .
+       . . . . . . . . . . . . 2 2 2 .
+       . 2 2 2 . . . . . 2 2 2 . . . .
+       . . . 2 . . . 2 2 . . . . . . .
+       . . 2 2 2 2 2 . . . . . . . . .
+       . . 2 2 . . . . . . . . . . . .
+       . 2 2 . . . . . . . . . . . . .
+       . . . . . . . . . . . . . . . .
+       . . . . . . . . . . . . . . . .
+    """),True)
+game.on_update_interval(500, on_update_interval)
