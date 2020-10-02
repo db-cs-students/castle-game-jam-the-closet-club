@@ -131,9 +131,10 @@ scene.setBackgroundColor(0)
 info.setLife(3)
 scene.cameraFollowSprite(Merek)
 controller.moveSprite(Merek, 75, 0)
-Merek.ay = 200
+Merek.ay = 300
+block.ay = 99999
 controller.player1.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Pressed, function on_button_event_a_pressed() {
-    Merek.vy = -138
+    Merek.vy = -150
 })
 scene.setTileMap(img`
     cccccccc666666666666666666666666666666666......................66666666666666666
@@ -153,12 +154,12 @@ scene.setTileMap(img`
     cccccccc666666366666366666663666663666366......................66666666666666666
     cccccccc666666636666666666666666663666666......................66666666666666666
     cccccccc666666666666666666666666666666666.66666666.............66666666666666666
-    c.8...8.666666666667776667776666666666666......................66666666666666666
-    c.....6.66666666666ccc999ccc6666666666666......................66666666666666666
-    c...d...66666666666ccc999ccc6666336666636......................66666666666666666
-    abbbbbbbbbbbbbbbbbbecc999ccc666633666666b......................66666666666666666
-    cccccccccccccccccccccc999ccabbbbbbbbbbbbe4444444444444444444444bbbbbbbbbbbbbbbbb
-    cccccccccccccccccccccabbbeccccccccccccccc2222222222222222222222ccccccccccccccccc
+    c.8...8.666666666667777777776666666666666......................66666666666666666
+    c.......6666666666becccccccc6666666666666......................66666666666666666
+    c...d...666666666beccccccccc6666336666636......................66666666666666666
+    abbbbbbbbbbbbbbbbecccccccccc666633666666b......................66666666666666666
+    cccccccccccccccccccccccccccabbbbbbbbbbbbe4444444444444444444444bbbbbbbbbbbbbbbbb
+    ccccccccccccccccccccccccccccccccccccccccc2222222222222222222222ccccccccccccccccc
     ccccccccccccccccccccccccccccccccccccccccc2222222222222222222222ccccccccccccccccc
 `)
 scene.setTile(10, img`
@@ -418,4 +419,7 @@ game.onUpdate(function on_update() {
         Merek.setImage(Merek_left)
     }
     
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function on_push(sprite: Sprite, otherSprite: Sprite) {
+    otherSprite.setVelocity(10, 0)
 })

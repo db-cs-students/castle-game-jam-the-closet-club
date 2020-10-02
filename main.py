@@ -130,9 +130,10 @@ scene.set_background_color(0)
 info.set_life(3)
 scene.camera_follow_sprite(Merek)
 controller.move_sprite(Merek, 75, 0)
-Merek.ay = 200
+Merek.ay = 300
+block.ay = 99999
 def on_button_event_a_pressed():
-    Merek.vy = -138
+    Merek.vy = -150
 controller.player1.on_button_event(ControllerButton.A, ControllerButtonEvent.PRESSED, on_button_event_a_pressed)
 scene.set_tile_map(img("""
     cccccccc666666666666666666666666666666666......................66666666666666666
@@ -152,12 +153,12 @@ scene.set_tile_map(img("""
     cccccccc666666366666366666663666663666366......................66666666666666666
     cccccccc666666636666666666666666663666666......................66666666666666666
     cccccccc666666666666666666666666666666666.66666666.............66666666666666666
-    c.8...8.666666666667776667776666666666666......................66666666666666666
-    c.....6.66666666666ccc999ccc6666666666666......................66666666666666666
-    c...d...66666666666ccc999ccc6666336666636......................66666666666666666
-    abbbbbbbbbbbbbbbbbbecc999ccc666633666666b......................66666666666666666
-    cccccccccccccccccccccc999ccabbbbbbbbbbbbe4444444444444444444444bbbbbbbbbbbbbbbbb
-    cccccccccccccccccccccabbbeccccccccccccccc2222222222222222222222ccccccccccccccccc
+    c.8...8.666666666667777777776666666666666......................66666666666666666
+    c.......6666666666becccccccc6666666666666......................66666666666666666
+    c...d...666666666beccccccccc6666336666636......................66666666666666666
+    abbbbbbbbbbbbbbbbecccccccccc666633666666b......................66666666666666666
+    cccccccccccccccccccccccccccabbbbbbbbbbbbe4444444444444444444444bbbbbbbbbbbbbbbbb
+    ccccccccccccccccccccccccccccccccccccccccc2222222222222222222222ccccccccccccccccc
     ccccccccccccccccccccccccccccccccccccccccc2222222222222222222222ccccccccccccccccc
 """))
 scene.set_tile(10, img("""
@@ -419,3 +420,7 @@ def on_update():
     elif controller.dx() < 0:
        Merek.set_image(Merek_left) 
 game.on_update(on_update)
+
+def on_push(sprite, otherSprite):
+    otherSprite.set_velocity(10, 0)
+sprites.on_overlap(SpriteKind.player, SpriteKind.food, on_push)
