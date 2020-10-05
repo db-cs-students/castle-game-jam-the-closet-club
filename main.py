@@ -482,7 +482,14 @@ tiles.place_on_tile(block, tiles.get_tile_location(33, 18))
 block.ay = 200
 meany.say("Plz dont touch me")
 
-
+canDoublejump = True
+controller.move_sprite(Merek ,75, 0) 
+def on_jump():
+    global canDoublejump
+    if Merek.is_hitting_tile(CollisionDirection.BOTTOM) or canDoublejump:
+       Merek.vy = -150
+       canDoublejump = Merek.is_hitting_tile(CollisionDirection.BOTTOM)
+controller.player1.on_button_event(ControllerButton.A,ControllerButtonEvent.PRESSED,on_jump)
 
 def on_overlap(sprite, otherSprite):
     info.change_life_by(-1)

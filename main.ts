@@ -482,6 +482,16 @@ tiles.placeOnTile(meany, tiles.getTileLocation(6, 19))
 tiles.placeOnTile(block, tiles.getTileLocation(33, 18))
 block.ay = 200
 meany.say("Plz dont touch me")
+let canDoublejump = true
+controller.moveSprite(Merek, 75, 0)
+controller.player1.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Pressed, function on_jump() {
+    
+    if (Merek.isHittingTile(CollisionDirection.Bottom) || canDoublejump) {
+        Merek.vy = -150
+        canDoublejump = Merek.isHittingTile(CollisionDirection.Bottom)
+    }
+    
+})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function on_overlap(sprite: Sprite, otherSprite: Sprite) {
     info.changeLifeBy(-1)
 })
