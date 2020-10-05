@@ -138,30 +138,30 @@ controller.player1.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Press
     Merek.vy = -150
 })
 scene.setTileMap(img`
-    cccccccc666666666666666666666666666666666......................66666666666666666666666666666cccccccccccccccccccccccccccc
-    cccccccc666666666666666666666666666666666......................66666666666666666666666666666cccccccccccccccccccccccccccc
-    cccccccc666666636666666666666666666666666......................66666666666666666666666666666cc66666666666666666666666ccc
-    cccccccc666666666666663666666666666666666......................66666666666666666666666666666c6666666666666666666666666cc
-    cccccccc666666666666666666666666666666666......................66666666666666666666666666666c6666666666666666666666666cc
+    cccccccc66666666666666666666666666666666.......................66666666666666666666666666666cccccccccccccccccccccccccccc
+    cccccccc6666666666666666666666666666666.........................6666666666666666666666666666cccccccccccccccccccccccccccc
+    cccccccc66666663666666666666666666666666.........................666666666666666666666666666cc66666666666666666666666ccc
+    cccccccc66666666666666366666666666666666.........................666666666666666666666666666c6666666666666666666666666cc
+    cccccccc666666666666666666666666666666666.......................6666666666666666666666666666c6666666666666666666666666cc
     cccccccc666666666666666666666666666366666......................66666666666666666666666666666c66666cccc6666666666666666cc
-    cccccccc666666666666666666666666666666666......................66666666666666666666666666666c6666c6666c666666666666666cc
-    cccccccc666636666666666666666666666666666......................66666666666666666666666666666c6666c6666c666666666666666cc
-    cccccccc66666666636666666666666666666666666666.................66666666666666666666666666666c6666c6666c666666666666666cc
-    cccccccc666666666366666366666636666666666......................66666666666666666666666666666c6666c6666c666666666666666cc
-    cccccccc666666666666666666666666666666666......................66666666666666666666666666666c6666c6666c666666666666666cc
-    cccccccc663666666666666666666666666666666.....bbbb.............66666666666666666666666666666c6666c6666c666666666666666cc
-    cccccc5c666666666666666666666666666666366......1f.....bbbb.....66666666666666666666666666666c6666c6666c666666666666666cc
-    c5cccccc666663366666636666666666666666336......1f......1f......66666666666666666666666666666c6666c6666c666666666666666cc
-    cccc5ccc666666366666366666663666663666366......1f..bbbb1f......66666666666666666666666666666c6666c6666c666666666666666cc
-    cccccccc666666636666666666666666663666666......1f...1f.1f......cccccccccccccccccc6666666666c66666c6666c666666666666666cc
-    cccccccc666666666666666666666666666666666.bbbbbbbb..1f.1f......666666666666666666cccccccccc666666c6666c666666666666666cc
-    c.8...8.666666666667777777776666666666666..1f..1f...1f.1f......6666666666666666666666666666666666c6666c666666666666666cc
-    c.......6666666666becccccccc6666666666666..1f..1f...1f.1f......666666666666666666666666666666666c66666a999977777666666cc
-    c...d...666666666becc5cccccc6666336666636..1f..1f...1f.1f......66666666666666666666666666666666c666666abbbbebbbb777666cc
+    cccccccc66666666666666666666666666666666.......................66666666666666666666666666666c6666c6666c666666666666666cc
+    cccccccc6666366666666666666666666666666........................66666666666666666666666666666c6666c6666c666666666666666cc
+    cccccccc6666666663666666666666666666666........................66666666666666666666666666666c6666c6666c666666666666666cc
+    cccccccc666666666366666366666636666666666.......................6666666666666666666666666666c6666c6666c666666666666666cc
+    cccccccc666666666666666666666666666666666.....bbbb...............666666666666666666666666666c6666c6666c666666666666666cc
+    cccccccc663666666666666666666666666666666......1f.....bbbb......6666666666666666666666666666c6666c6666c666666666666666cc
+    cccccccc66666666666666666666666666666636.......1f......1f.......6666666666666666666666666666c6666c6666c666666666666666cc
+    cccccccc66666336666663666666666666666633.......1f..bbbb1f......66666666666666666666666666666c6666c6666c666666666666666cc
+    cccccccc6666663666663666666636666636663........1f...1f.1f......66666666666666666666666666666c6666c6666c666666666666666cc
+    cccccccc66666663666666666666666666366666..bbbbbbbb..1f.1f......cccccccccccccccccc6666666666c66666c6666c666666666666666cc
+    cccccccc6666666666666666666666666666666....1f..1f...1f.1f......666666666666666666cccccccccc666666c6666c666666666666666cc
+    c.8...8.66666666666777777777666666666655...1f..1f...1f.1f......6666666666666666666666666666666666c6666c666666666666666cc
+    c.......6666666666becccccccc666666666666...1f..1f...1f.1f......666666666666666666666666666666666c66666a999977777666666cc
+    c...d...666666666beccccccccc6666336666636..1f..1f...1f.1f......66666666666666666666666666666666c666666abbbbebbbb777666cc
     abbbbbbbbbbbbbbbbecccccccccc666633666666b..1f..1f...1f.1f......666666666666666666bbbbbbbbbbbbbcc666666666666666666c666cc
-    c5cccccccccccccccccccccccccabbbbbbbbbbbbe441f441f4441f41f444444bbbbbbbbbbbbbbbbbb666666666666666666666666666666666c666cc
-    cccccc5ccccc5ccccccc5ccccccccc5cccccccccc221f221f2221f21f222222ccccccccccccccccc6666666666666666666666666666666666c666cc
-    ccccccccccccccccccccccccccccccccccccccc5c221f221f2221f21f222222ccccccccccccccccc6666666666666666666666666666666666c666cc
+    cccccccccccccccccccccccccccabbbbbbbbbbbbe441f441f4441f41f444444bbbbbbbbbbbbbbbbbb666666666666666666666666666666666c666cc
+    ccccccccccccccccccccccccccccccccccccccccc221f221f2221f21f222222ccccccccccccccccc6666666666666666666666666666666666c666cc
+    ccccccccccccccccccccccccccccccccccccccccc221f221f2221f21f222222ccccccccccccccccc6666666666666666666666666666666666c666cc
     ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc...cc
     .cc.....................................................................................................................
     ........................................................................................................................
@@ -386,22 +386,22 @@ scene.setTile(6, img`
     b b b b b b b b c b b b b b b b
 `, false)
 scene.setTile(5, img`
-    b b b b b b b b b b b b b b b b
-    b c c c c c c c b c c c c c c c
-    b c c c c c c c b c c c c c c c
-    b c c c c c c c b c c c c c c c
-    b b b b b b b b b b b b b b b b
-    c c c c c b c c c c c c b c c c
-    c c c c c b c c c c c c b c c c
-    c c c c c b c c c c c c b c c c
-    b b b b b b b b b b b b b b b b
-    b c c c c c c c b f f f f f f f
-    b c c c c c c c b f f f f f f f
-    b c c c c c c c b f f f f f f f
-    b b b b b b b b b b b b b b b b
-    c c c c c b c c c c c c b c c c
-    c c c c c b c c c c c c b c c c
-    c c c c c b c c c c c c b c c c
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
 `, false)
 scene.setTile(1, img`
     . . d b c b b c c b b c c b b c
@@ -506,4 +506,27 @@ game.onUpdate(function on_update() {
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function on_push(sprite: Sprite, otherSprite: Sprite) {
     otherSprite.setVelocity(10, 0)
+})
+game.onUpdate(function on_update2() {
+    if (block.x == 608) {
+        scene.setTile(5, img`
+    c c c c c c c c c c c c c c c c
+    c b b b b b b b b b b b b b b b
+    c b b b b b b b b b b b b b b b
+    c b b b b b b b b b b b b b b b
+    c b b b b b b b b b b b b b b b
+    c b b b b b b b b b b b b b b b
+    c b b b b b b b b b b b b b b b
+    c b b b b b b b b b b b b b b b
+    c c c c c c c c c c c c c c c c
+    b b b b b b b b c b b b b b b b
+    b b b b b b b b c b b b b b b b
+    b b b b b b b b c b b b b b b b
+    b b b b b b b b c b b b b b b b
+    b b b b b b b b c b b b b b b b
+    b b b b b b b b c b b b b b b b
+    b b b b b b b b c b b b b b b b
+`, true)
+    }
+    
 })
