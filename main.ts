@@ -174,28 +174,28 @@ controller.player1.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Press
     Merek.vy = -150
 })
 scene.setTileMap(img`
-    cccccccc66666666666666666666666666666666.......................ccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-    cccccccc6666666666666666666666666666666.........................cccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-    cccccccc66666663666666666666666666666666.........................ccccccccccccccccccccccccccccc66666666666666666666666ccc
-    cccccccc66666666666666366666666666666666.........................cccccccccccccccccccccccccccc6666666666666666666666666cc
-    cccccccc666666666666666666666666666666666.......................ccccccccccccccccccccccccccccc6666666666666666666666666cc
-    cccccccc666666666666666666666666666366666......................cccccccccccccccccccccccccccccc66666cccc6666666666666666cc
-    cccccccc66666666666666666666666666666666.......................cccccccccccccccccccccccccccccab666cccccc666666666666666cc
-    cccccccc6666366666666666666666666666666........................cccccccccccccccccccccccccccccc6666cccccc666666666666666cc
-    cccccccc6666666663666666666666666666666........................cccccccccccccccccccccccccccccc6666cccccc666666666666666cc
-    cccccccc666666666366666366666636666666666.......................ccccccccccccccccccccccccccccc666beccccc666666666666666cc
-    cccccccc666666666666666666666666666666666.....bbbb...............cccccccccccccccccccccccccccc6666cccccc666666666666666cc
-    cccccccc663666666666666666666666666666666......1f.....bbbb......ccccccccccccccccccccccccccccab666cccccc666666666666666cc
+    cccccccc66666666666666666666666666666666cc.....................ccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+    cccccccc6666666666666666666666666666666ccc......................cccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+    cccccccc66666663666666666666666666666666cc.......................ccccccccccccccccccccccccccccc66666666666666666666666ccc
+    cccccccc66666666666666366666666666666666cc.......................ccccc......ccccccccccccccccc6666666666666666666666666cc
+    cccccccc666666666666666666666666666666666c......................cccc.........cccccccccccccccc6666666666666666666666666cc
+    cccccccc66666666666666666666666666636ccccc......................cccc.........cccccccccccccccc66666cccc6666666666666666cc
+    cccccccc66666666666666666666666666666c.......................................cccccccccccccccab666cccccc666666666666666cc
+    cccccccc66663666666666666666666666666c.......................................cccccccccccccccc6666cccccc666666666666666cc
+    cccccccc66666666636666666666666666666cbbbbb......................ccccc......ccccccccccccccccc6666cccccc666666666666666cc
+    cccccccc666666666366666366666636666666666......................cccccccccccccccccccccccccccccc666beccccc666666666666666cc
+    cccccccc666666666666666666666666666666666.....bbbb.............cccccccccccccccccccccccccccccc6666cccccc666666666666666cc
+    cccccccc663666666666666666666666666666666......1f.....bbbb.....cccccccccccccccccccccccccccccab666cccccc666666666666666cc
     cccccccc66666666666666666666666666666636.......1f......1f.......ccccccccccccccccccccccccccccc6666cccccc666666666666666cc
     cccccccc66666336666663666666666666666633.......1f..bbbb1f......cccccccccccccccccccccccccccccc6666cccccc666666666666666cc
     cccccccc6666663666663666666636666636663........1f...1f.1f......cccccccccccccccccccccccccccccc666beccccc666666666666666cc
     cccccccc66666663666666666666666666366666..bbbbbbbb..1f.1f......ccccccccccccccccccccccccccccc66666cccccc666666666666666cc
-    cccccccc6666666666666666666666666666666....1f..1f...1f.1f......666666666666666666cccccccccc666666cccccc666666666666666cc
-    c.8...8.66666666666777777777666666665555...1f..1f...1f.1f......6666666666666666666666666666666666cccccc666666666666666cc
-    c.......6666666666becccccccc666666666666...1f..1f...1f.1f......666666666666666666666666666666666cccccca999977777666666cc
-    c...d...666666666beccccccccc6666336666636..1f..1f...1f.1f......66666666666666666666666666666666cccccccabbbbebbbb777666cc
-    abbbbbbbbbbbbbbbbecccccccccc666633666666b..1f..1f...1f.1f......666666666666666666bbbbbbbbbbbbbccccccccccccccccccccc666cc
-    cccccccccccccccccccccccccccabbbbbbbbbbbbe441f441f4441f41f444444bbbbbbbbbbbbbbbbbbcccccccccccccccccccccccccccccccccc666cc
+    cccccccc6666666666666666666666666666666....1f..1f...1f.1f......ccc666666666666666cccccccccc666666cccccc666666666666666cc
+    c.8...8.66666666666777777777666666665555...1f..1f...1f.1f......ccc6666666666666666666666666666666cccccc666666666666666cc
+    c.......6666666666becccccccc666666666666...1f..1f...1f.1f......ccc666666666666666666666666666666cccccca999977777666666cc
+    c...d...666666666beccccccccc6666336666636..1f..1f...1f.1f......ccc66666666666666666666666666666cccccccabbbbebbbb777666cc
+    abbbbbbbbbbbbbbbbecccccccccc666633666666b..1f..1f...1f.1f......ccc666666666666666bbbbbbbbbbbbbccccccccccccccccccccc666cc
+    cccccccccccccccccccccccccccabbbbbbbbbbbbe441f441f4441f41f444444cccbbbbbbbbbbbbbbbcccccccccccccccccccccccccccccccccc666cc
     ccccccccccccccccccccccccccccccccccccccccc221f221f2221f21f222222cccccccccccccccccccccccccccccccccccccccccccccccccccc666cc
     ccccccccccccccccccccccccccccccccccccccccc221f221f2221f21f222222cccccccccccccccccccccccccccccccccccccccccccccccccccc666cc
     ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc...cc
