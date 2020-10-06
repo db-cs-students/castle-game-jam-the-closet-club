@@ -58,6 +58,42 @@ let Merek_left = img`
     . . . . . . 1 4 1 4 1 . . . . .
     . . . . . 1 e e 1 e e 1 . . . .
 `
+let Merek_jump_right = img`
+    . . . . 1 . . . . . . . 1 . . .
+    . . . 1 d 1 1 1 1 1 1 1 d 1 . .
+    . . . 1 4 1 d d d d f 1 4 1 . .
+    . . . 1 4 1 d d f d d 1 4 1 . .
+    . . . 1 4 1 d d d d d 1 4 1 . .
+    . . . . 1 4 1 1 4 1 1 4 1 . . .
+    . . . . . 1 4 4 4 4 4 1 . . . .
+    . . . . . . 1 4 4 4 1 . . . . .
+    . . . . . . 1 4 4 4 1 . . . . .
+    . . . . . . 1 4 4 4 1 . . . . .
+    . . . . . . 1 f f f 1 . . . . .
+    . . . . . . 1 4 4 4 1 . . . . .
+    . . . . 1 1 1 4 1 4 1 . . . . .
+    . . . 1 e 4 4 e 4 1 . . . . . .
+    . . . 1 e 1 1 e 1 . . . . . . .
+    . . . . 1 . . 1 . . . . . . . .
+`
+let Merek_jump_left = img`
+    . . . . 1 . . . . . . . 1 . . .
+    . . . 1 d 1 1 1 1 1 1 1 d 1 . .
+    . . . 1 4 1 f d d d d 1 4 1 . .
+    . . . 1 4 1 d d f d d 1 4 1 . .
+    . . . 1 4 1 d d d d d 1 4 1 . .
+    . . . . 1 4 1 1 4 1 1 4 1 . . .
+    . . . . . 1 4 4 4 4 4 1 . . . .
+    . . . . . . 1 4 4 4 1 . . . . .
+    . . . . . . 1 4 4 4 1 . . . . .
+    . . . . . . 1 4 4 4 1 . . . . .
+    . . . . . . 1 f f f 1 . . . . .
+    . . . . . . 1 4 4 4 1 . . . . .
+    . . . . . . 1 4 1 4 1 1 1 . . .
+    . . . . . . . 1 4 e 4 4 e 1 . .
+    . . . . . . . . 1 e 1 1 e 1 . .
+    . . . . . . . . . 1 . . 1 . . .
+`
 //  SpriteKind.create(movable) 
 let block = sprites.create(img`
     444444444444444444444444444444444444444444444444444444444444444e
@@ -155,7 +191,7 @@ scene.setTileMap(img`
     cccccccc6666663666663666666636666636663........1f...1f.1f......cccccccccccccccccccccccccccccc666beccccc666666666666666cc
     cccccccc66666663666666666666666666366666..bbbbbbbb..1f.1f......ccccccccccccccccccccccccccccc66666cccccc666666666666666cc
     cccccccc6666666666666666666666666666666....1f..1f...1f.1f......666666666666666666cccccccccc666666cccccc666666666666666cc
-    c.8...8.66666666666777777777666666666555...1f..1f...1f.1f......6666666666666666666666666666666666cccccc666666666666666cc
+    c.8...8.66666666666777777777666666665555...1f..1f...1f.1f......6666666666666666666666666666666666cccccc666666666666666cc
     c.......6666666666becccccccc666666666666...1f..1f...1f.1f......666666666666666666666666666666666cccccca999977777666666cc
     c...d...666666666beccccccccc6666336666636..1f..1f...1f.1f......66666666666666666666666666666666cccccccabbbbebbbb777666cc
     abbbbbbbbbbbbbbbbecccccccccc666633666666b..1f..1f...1f.1f......666666666666666666bbbbbbbbbbbbbccccccccccccccccccccc666cc
@@ -498,15 +534,17 @@ controller.player1.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Press
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function on_overlap(sprite: Sprite, otherSprite: Sprite) {
     info.changeLifeBy(-1)
 })
-game.onUpdate(function on_update() {
-    Merek.say("" + controller.dx())
+function on_update() {
     if (controller.dx() > 0) {
         Merek.setImage(Merek_right)
     } else if (controller.dx() < 0) {
         Merek.setImage(Merek_left)
     }
     
-})
+}
+
+game.onUpdate(on_update)
+game.onUpdate(on_update)
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function on_push(sprite: Sprite, otherSprite: Sprite) {
     scene.cameraShake(2)
     otherSprite.setVelocity(10, 0)

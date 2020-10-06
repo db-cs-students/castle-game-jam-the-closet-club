@@ -57,6 +57,42 @@ Merek_left = img("""
     . . . . . . 1 4 1 4 1 . . . . .
     . . . . . 1 e e 1 e e 1 . . . .
 """)
+Merek_jump_right = img("""
+    . . . . 1 . . . . . . . 1 . . .
+    . . . 1 d 1 1 1 1 1 1 1 d 1 . .
+    . . . 1 4 1 d d d d f 1 4 1 . .
+    . . . 1 4 1 d d f d d 1 4 1 . .
+    . . . 1 4 1 d d d d d 1 4 1 . .
+    . . . . 1 4 1 1 4 1 1 4 1 . . .
+    . . . . . 1 4 4 4 4 4 1 . . . .
+    . . . . . . 1 4 4 4 1 . . . . .
+    . . . . . . 1 4 4 4 1 . . . . .
+    . . . . . . 1 4 4 4 1 . . . . .
+    . . . . . . 1 f f f 1 . . . . .
+    . . . . . . 1 4 4 4 1 . . . . .
+    . . . . 1 1 1 4 1 4 1 . . . . .
+    . . . 1 e 4 4 e 4 1 . . . . . .
+    . . . 1 e 1 1 e 1 . . . . . . .
+    . . . . 1 . . 1 . . . . . . . .
+""")
+Merek_jump_left = img("""
+    . . . . 1 . . . . . . . 1 . . .
+    . . . 1 d 1 1 1 1 1 1 1 d 1 . .
+    . . . 1 4 1 f d d d d 1 4 1 . .
+    . . . 1 4 1 d d f d d 1 4 1 . .
+    . . . 1 4 1 d d d d d 1 4 1 . .
+    . . . . 1 4 1 1 4 1 1 4 1 . . .
+    . . . . . 1 4 4 4 4 4 1 . . . .
+    . . . . . . 1 4 4 4 1 . . . . .
+    . . . . . . 1 4 4 4 1 . . . . .
+    . . . . . . 1 4 4 4 1 . . . . .
+    . . . . . . 1 f f f 1 . . . . .
+    . . . . . . 1 4 4 4 1 . . . . .
+    . . . . . . 1 4 1 4 1 1 1 . . .
+    . . . . . . . 1 4 e 4 4 e 1 . .
+    . . . . . . . . 1 e 1 1 e 1 . .
+    . . . . . . . . . 1 . . 1 . . .
+""")
 # SpriteKind.create(movable) 
 block = sprites.create(img("""
     444444444444444444444444444444444444444444444444444444444444444e
@@ -154,7 +190,7 @@ scene.set_tile_map(img("""
     cccccccc6666663666663666666636666636663........1f...1f.1f......cccccccccccccccccccccccccccccc666beccccc666666666666666cc
     cccccccc66666663666666666666666666366666..bbbbbbbb..1f.1f......ccccccccccccccccccccccccccccc66666cccccc666666666666666cc
     cccccccc6666666666666666666666666666666....1f..1f...1f.1f......666666666666666666cccccccccc666666cccccc666666666666666cc
-    c.8...8.66666666666777777777666666666555...1f..1f...1f.1f......6666666666666666666666666666666666cccccc666666666666666cc
+    c.8...8.66666666666777777777666666665555...1f..1f...1f.1f......6666666666666666666666666666666666cccccc666666666666666cc
     c.......6666666666becccccccc666666666666...1f..1f...1f.1f......666666666666666666666666666666666cccccca999977777666666cc
     c...d...666666666beccccccccc6666336666636..1f..1f...1f.1f......66666666666666666666666666666666cccccccabbbbebbbb777666cc
     abbbbbbbbbbbbbbbbecccccccccc666633666666b..1f..1f...1f.1f......666666666666666666bbbbbbbbbbbbbccccccccccccccccccccc666cc
@@ -499,11 +535,12 @@ def on_overlap(sprite, otherSprite):
 sprites.on_overlap(SpriteKind.player, SpriteKind.enemy, on_overlap)
 
 def on_update():
-    Merek.say(str(controller.dx()))
     if controller.dx() > 0:
         Merek.set_image(Merek_right)
     elif controller.dx() < 0:
        Merek.set_image(Merek_left) 
+game.on_update(on_update)
+
 game.on_update(on_update)
 
 def on_push(sprite, otherSprite):
