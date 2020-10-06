@@ -4,6 +4,10 @@ Creators: Michael W. and Jason B.
 Description: The guy is doing stuff! oh crap!
 
  */
+namespace SpriteKind {
+    export const tunnel = SpriteKind.create()
+}
+
 //  Merek = sprites.create(img("""
 //      . . . . . . . . . . . . . . . .
 //      . . . . . . . . . . . . . . . .
@@ -628,7 +632,7 @@ let vent = sprites.create(img`
     f c b f f f f f f c f f c f f f
     b b b f b f f c c b b f f b b b
     b b b f f b b b c b b b f f b b
-`, SpriteKind.Projectile)
+`, SpriteKind.tunnel)
 vent.setPosition(615, 120)
 let ventout = sprites.create(img`
     c c c c c c c c c f f f f f f c
@@ -647,6 +651,9 @@ let ventout = sprites.create(img`
     f c b f f f f f f c f f c f f f
     b b b f b f f c c b b f f b b b
     b b b f f b b b c b b b f f b b
-`, SpriteKind.Projectile)
+`)
 ventout.setPosition(1080, 328)
-Merek.overlapsWith(vent)
+//  Vent Mechanic
+sprites.onOverlap(SpriteKind.Player, SpriteKind.tunnel, function on_overlap2(sprite: Sprite, otherSprite: Sprite) {
+    tiles.placeOnTile(Merek, tiles.getTileLocation(66, 20))
+})

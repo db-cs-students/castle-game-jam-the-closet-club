@@ -3,6 +3,10 @@ Title: Prison Peril
 Creators: Michael W. and Jason B.
 Description: The guy is doing stuff! oh crap!
 """
+@namespace 
+class SpriteKind():
+    tunnel = SpriteKind.create()
+
 # Merek = sprites.create(img("""
 #     . . . . . . . . . . . . . . . .
 #     . . . . . . . . . . . . . . . .
@@ -625,7 +629,7 @@ vent = sprites.create(img("""
     f c b f f f f f f c f f c f f f
     b b b f b f f c c b b f f b b b
     b b b f f b b b c b b b f f b b
-"""),SpriteKind.projectile)
+"""),SpriteKind.tunnel)
 vent.set_position(615, 120)
 ventout = sprites.create(img("""
     c c c c c c c c c f f f f f f c
@@ -644,6 +648,10 @@ ventout = sprites.create(img("""
     f c b f f f f f f c f f c f f f
     b b b f b f f c c b b f f b b b
     b b b f f b b b c b b b f f b b
-"""),SpriteKind.projectile)
+"""))
 ventout.set_position(1080, 328)
-Merek.overlaps_with(vent)
+
+# Vent Mechanic
+def on_overlap2(sprite, otherSprite):
+    tiles.place_on_tile(Merek, tiles.get_tile_location(66, 20))
+sprites.on_overlap(SpriteKind.player, SpriteKind.tunnel, on_overlap2)
