@@ -111,7 +111,7 @@ coin = sprites.create(img("""
     . . . . . . 5 5 5 4 . . . . . .
     . . . . . . . . . . . . . . . .
 """),SpriteKind.projectile)
-tiles.place_on_tile(coin, tiles.get_tile_location(4, 18))
+coin.set_position(1175, 100)
 # SpriteKind.create(movable) 
 block = sprites.create(img("""
     444444444444444444444444444444444444444444444444444444444444444e
@@ -184,8 +184,28 @@ block.set_flag(SpriteFlag.SHOW_PHYSICS, True)
 Merek = sprites.create(Merek_right, SpriteKind.player)
 scene.set_background_color(0)
 info.set_life(3)
+Merek.set_flag(SpriteFlag.SHOW_PHYSICS, True)
 scene.camera_follow_sprite(Merek)
 controller.move_sprite(Merek, 75, 0)
+coin1 = sprites.create(img("""
+    . . . . . . . . . . . . . . . .
+    . . . . . . 5 5 2 4 . . . . . .
+    . . . . . 5 5 5 5 2 4 . . . . .
+    . . . . 5 5 5 5 5 5 2 4 . . . .
+    . . . . 5 5 5 4 5 5 2 4 . . . .
+    . . . . 5 5 5 4 5 5 2 4 . . . .
+    . . . . 5 5 5 4 5 5 2 4 . . . .
+    . . . . 5 5 5 4 5 5 2 4 . . . .
+    . . . . 5 5 5 4 5 5 2 4 . . . .
+    . . . . 5 5 5 4 5 5 2 4 . . . .
+    . . . . 5 5 5 4 5 5 2 4 . . . .
+    . . . . 5 5 5 5 5 5 2 4 . . . .
+    . . . . 5 5 5 5 5 5 2 4 . . . .
+    . . . . . 5 5 5 5 2 4 . . . . .
+    . . . . . . 5 5 5 4 . . . . . .
+    . . . . . . . . . . . . . . . .
+"""),SpriteKind.projectile)
+coin1.set_position(370, 215)
 Merek.ay = 300
 block.ay = 99999
 def on_button_event_a_pressed():

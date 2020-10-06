@@ -112,7 +112,7 @@ let coin = sprites.create(img`
     . . . . . . 5 5 5 4 . . . . . .
     . . . . . . . . . . . . . . . .
 `, SpriteKind.Projectile)
-tiles.placeOnTile(coin, tiles.getTileLocation(4, 18))
+coin.setPosition(1175, 100)
 //  SpriteKind.create(movable) 
 let block = sprites.create(img`
     444444444444444444444444444444444444444444444444444444444444444e
@@ -185,8 +185,28 @@ block.setFlag(SpriteFlag.ShowPhysics, true)
 let Merek = sprites.create(Merek_right, SpriteKind.Player)
 scene.setBackgroundColor(0)
 info.setLife(3)
+Merek.setFlag(SpriteFlag.ShowPhysics, true)
 scene.cameraFollowSprite(Merek)
 controller.moveSprite(Merek, 75, 0)
+let coin1 = sprites.create(img`
+    . . . . . . . . . . . . . . . .
+    . . . . . . 5 5 2 4 . . . . . .
+    . . . . . 5 5 5 5 2 4 . . . . .
+    . . . . 5 5 5 5 5 5 2 4 . . . .
+    . . . . 5 5 5 4 5 5 2 4 . . . .
+    . . . . 5 5 5 4 5 5 2 4 . . . .
+    . . . . 5 5 5 4 5 5 2 4 . . . .
+    . . . . 5 5 5 4 5 5 2 4 . . . .
+    . . . . 5 5 5 4 5 5 2 4 . . . .
+    . . . . 5 5 5 4 5 5 2 4 . . . .
+    . . . . 5 5 5 4 5 5 2 4 . . . .
+    . . . . 5 5 5 5 5 5 2 4 . . . .
+    . . . . 5 5 5 5 5 5 2 4 . . . .
+    . . . . . 5 5 5 5 2 4 . . . . .
+    . . . . . . 5 5 5 4 . . . . . .
+    . . . . . . . . . . . . . . . .
+`, SpriteKind.Projectile)
+coin1.setPosition(370, 215)
 Merek.ay = 300
 block.ay = 99999
 controller.player1.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Pressed, function on_button_event_a_pressed() {
