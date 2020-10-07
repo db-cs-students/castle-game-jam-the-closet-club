@@ -215,6 +215,12 @@ Merek.ay = 300
 block.ay = 99999
 controller.player1.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Pressed, function on_button_event_a_pressed() {
     Merek.vy = -150
+    if (controller.dx() > 0) {
+        Merek.setImage(Merek_jump_right)
+    } else if (controller.dx() < 0) {
+        Merek.setImage(Merek_jump_left)
+    }
+    
 })
 scene.setTileMap(img`
     cccccccc666666666666666666666ccccccccccccc.....................ccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
@@ -223,22 +229,22 @@ scene.setTileMap(img`
     cccccccc66666666666666366666666ccccccccccc.......................ccccc......ccccccccccccccccc6666666666666666666666666cc
     cccccccc666666666666666666666666cccccccccc......................cccc.........cccccccccccccccc6666666666666666666666666cc
     cccccccc6666666666666666666666666ccccccccc......................cccc.........cccccccccccccccc66666cccc6666666666666666cc
-    cccccccc66666666666666666666666666cccc6666...................................cccccccccccccccab666cccccc666666666666666cc
+    cccccccc66666666666666666666666666cccc6666...................................cccccccccccccccc6666cccccc666666666666666cc
     cccccccc666636666666666666666666666ccc.6666..................................cccccccccccccccc6666cccccc666666666666666cc
-    cccccccc6666666663666666666666666666cabbbbb......................ccccc......ccccccccccccccccc6666cccccc666666666666666cc
-    cccccccc6666666663666663666666366666666666.....................cccccccccccccccccccccccccccccc666beccccc666666666666666cc
+    cccccccc6666666663666666666666666666cabbbbb......................ccccc......cccccccccccccccccb666cccccc666666666666666cc
+    cccccccc6666666663666663666666366666666666.....................cccccccccccccccccccccccccccccc6666cccccc666666666666666cc
     cccccccc666666666666666666666666666666666.....bbbb.............cccccccccccccccccccccccccccccc6666cccccc666666666666666cc
-    cccccccc663666666666666666666666666666666......1f.....bbbb.....cccccccccccccccccccccccccccccab666cccccc666666666666666cc
+    cccccccc663666666666666666666666666666666......1f.....bbbb.....cccccccccccccccccccccccccccccc666bcccccc666666666666666cc
     cccccccc66666666666666666666666666666636.......1f......1f......cccccccccccccccccccccccccccccc6666cccccc666666666666666cc
     cccccccc66666336666663666666666666666633.......1f..bbbb1f......cccccccccccccccccccccccccccccc6666cccccc666666666666666cc
-    cccccccc6666663666663666666636666636663........1f...1f.1f......cccccccccccccccccccccccccccccc666beccccc666666666666666cc
+    cccccccc6666663666663666666636666636663........1f...1f.1f......ccccccccccccccccccccccccccccccb666cccccc666666666666666cc
     cccccccc66666663666666666666666666366666..bbbbbbbb..1f.1f......ccccccccccccccccccccccccccccc66666cccccc666666666666666cc
     cccccccc6666666666666666666666666666666....1f..1f...1f.1f......ccc666666666666666cccccccccc666666cccccc666666666666666cc
     c.8...8.66666666666777777777666666665555...1f..1f...1f.1f......ccc6666666666666666666666666666666cccccc666666666666666cc
-    c.......6666666666becccccccc666666666666...1f..1f...1f.1f......ccc666666666666666666666666666666cccccca999977777666666cc
-    c...d...666666666beccccccccc6666336666636..1f..1f...1f.1f......ccc66666666666666666666666666666cccccccabbbbebbbb777666cc
-    abbbbbbbbbbbbbbbbecccccccccc666633666666b..1f..1f...1f.1f......ccc666666666666666bbbbbbbbbbbbbccccccccccccccccccccc666cc
-    cccccccccccccccccccccccccccabbbbbbbbbbbbe441f441f4441f41f444444cccbbbbbbbbbbbbbbbcccccccccccccccccccccccccccccccccc666cc
+    c.......6666666666becccccccc666666666666...1f..1f...1f.1f......ccc666666666666666666666666666666beccccc999977777666666cc
+    c...d...666666666beccccccccc6666336666636..1f..1f...1f.1f......ccc66666666666666666666666666666becccccabbbbecccc777666cc
+    abbbbbbbbbbbbbbbbecccccccccc666633666666b..1f..1f...1f.1f......ccc666666666666666bbbbbbbbbbbbbbeccccccccccccccccccc666cc
+    cccccccccccccccccccccccccccabbbbbbbbbbbbe441f441f4441f41f444444cccbbbbbbbbbbbbbbbeccccccccccccccccccccccccccccccccc666cc
     ccccccccccccccccccccccccccccccccccccccccc221f221f2221f21f222222cccccccccccccccccccccccccccccccccccccccccccccccccccc666cc
     ccccccccccccccccccccccccccccccccccccccccc221f221f2221f21f222222cccccccccccccccccccccccccccccccccccccccccccccccccccc666cc
     ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc...cc
@@ -247,14 +253,14 @@ scene.setTileMap(img`
     .cc...................................................................................................................cc
     ......................................................................................................................cc
     ........................................................7777..........................................................cc
-    ........................................................cccc.......................................................bbbcc
-    ........................................................cccc..7777................................................bccccc
-    ........................................................cccc..cccc...............................................bcccccc
-    ........................................................cccc..cccc...........77777777...........................bccccccc
-    .....................................77777..............cccc..cccc..777777...cccccccc........777777.......777777cccccccc
-    .....................................ccccc44444444444444cccc44cccc44cccccc444cccccccc44444444cccccc4444444cccccccccccccc
-    .....................................ccccc22222222222222cccc22cccc22cccccc222cccccccc22222222cccccc2222222cccccccccccccc
-    .....................................ccccc22222222222222cccc22cccc22cccccc222cccccccc22222222cccccc2222222cccccccccccccc
+    ........................................................cccc.......................................................bbbec
+    ........................................................cccc..7777................................................becccc
+    ........................................................cccc..cccc...............................................beccccc
+    ........................................................cccc..cccc...........77777777...........................becccccc
+    .....................................77777.......777....cccc..cccc..777777...cccccccc........777777.......777777eccccccc
+    .....................................ccccc4444444ccc4444cccc44cccc44cccccc444cccccccc44444444cccccc4444444cccccccccccccc
+    .....................................ccccc2222222ccc2222cccc22cccc22cccccc222cccccccc22222222cccccc2222222cccccccccccccc
+    .....................................ccccc2222222ccc2222cccc22cccc22cccccc222cccccccc22222222cccccc2222222cccccccccccccc
     ........................................................................................................................
     ........................................................................................................................
     ........................................................................................................................
