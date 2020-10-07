@@ -49,6 +49,7 @@ guide1 = sprites.create(img("""
     . . . . . 1 1 b b 1 1 . . . . .
 """), SpriteKind.guide)
 guide1.set_position(330, 264)
+guide1.say("Keep an Eye Out For Coins!")
 guide2 = sprites.create(img("""
     . . . . . . . . . . . . . . . .
     . . . . . . . . . . . . . . . .
@@ -68,6 +69,7 @@ guide2 = sprites.create(img("""
     . . . . . 1 1 b b 1 1 . . . . .
 """), SpriteKind.guide)
 guide2.set_position(500, 328)
+guide2.say("Push the Box, and Jump on Top When it Finishes Moving")
 guide3 = sprites.create(img("""
     . . . . . . . . . . . . . . . .
     . . . . . . . . . . . . . . . .
@@ -87,6 +89,7 @@ guide3 = sprites.create(img("""
     . . . . . 1 1 b b 1 1 . . . . .
 """), SpriteKind.guide)
 guide3.set_position(895, 168)
+guide3.say("Clearly Nothing This Way....")
 guide4 = sprites.create(img("""
     . . . . . . . . . . . . . . . .
     . . . . . . . . . . . . . . . .
@@ -106,6 +109,7 @@ guide4 = sprites.create(img("""
     . . . . . 1 1 b b 1 1 . . . . .
 """), SpriteKind.guide)
 guide4.set_position(645, 120)
+guide4.say("Look For Holes In the Wall")
 guide5 = sprites.create(img("""
     . . . . . . . . . . . . . . . .
     . . . . . . . . . . . . . . . .
@@ -125,6 +129,7 @@ guide5 = sprites.create(img("""
     . . . . . 1 1 b b 1 1 . . . . .
 """), SpriteKind.guide)
 guide5.set_position(1495, 312)
+guide5.say("Space Jumps to Get Higher")
 guide6 = sprites.create(img("""
     . . . . . . . . . . . . . . . .
     . . . . . . . . . . . . . . . .
@@ -144,6 +149,7 @@ guide6 = sprites.create(img("""
     . . . . . 1 1 b b 1 1 . . . . .
 """), SpriteKind.guide)
 guide6.set_position(62, 312)
+guide6.say("Excape the Dungeon to Escape! Watch for Lava and Other Obstacles")
 Merek_right = img("""
     . . . . . . . . . . . . . . . .
     . . . . . . 1 1 1 1 1 . . . . .
@@ -685,7 +691,6 @@ meany = sprites.create(img("""
 tiles.place_on_tile(meany, tiles.get_tile_location(6, 19))
 tiles.place_on_tile(block, tiles.get_tile_location(33, 18))
 block.ay = 200
-meany.say("Plz dont touch me")
 
 canDoublejump = True
 controller.move_sprite(Merek ,75, 0) 
@@ -802,3 +807,7 @@ flagpole.set_position(513, 536)
 def on_flag_grab(sprite, otherSprite):
     game.over(True)
 sprites.on_overlap(SpriteKind.player, SpriteKind.player, on_flag_grab)
+def on_overlap3(sprite, otherSprite):
+    coin.destroy()
+    info.change_score_by(1)
+sprites.on_overlap(SpriteKind.player, SpriteKind.projectile, on_overlap3)

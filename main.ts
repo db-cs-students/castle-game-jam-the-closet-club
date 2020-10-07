@@ -50,6 +50,7 @@ let guide1 = sprites.create(img`
     . . . . . 1 1 b b 1 1 . . . . .
 `, SpriteKind.guide)
 guide1.setPosition(330, 264)
+guide1.say("Keep an Eye Out For Coins!")
 let guide2 = sprites.create(img`
     . . . . . . . . . . . . . . . .
     . . . . . . . . . . . . . . . .
@@ -69,6 +70,7 @@ let guide2 = sprites.create(img`
     . . . . . 1 1 b b 1 1 . . . . .
 `, SpriteKind.guide)
 guide2.setPosition(500, 328)
+guide2.say("Push the Box, and Jump on Top When it Finishes Moving")
 let guide3 = sprites.create(img`
     . . . . . . . . . . . . . . . .
     . . . . . . . . . . . . . . . .
@@ -88,6 +90,7 @@ let guide3 = sprites.create(img`
     . . . . . 1 1 b b 1 1 . . . . .
 `, SpriteKind.guide)
 guide3.setPosition(895, 168)
+guide3.say("Clearly Nothing This Way....")
 let guide4 = sprites.create(img`
     . . . . . . . . . . . . . . . .
     . . . . . . . . . . . . . . . .
@@ -107,6 +110,7 @@ let guide4 = sprites.create(img`
     . . . . . 1 1 b b 1 1 . . . . .
 `, SpriteKind.guide)
 guide4.setPosition(645, 120)
+guide4.say("Look For Holes In the Wall")
 let guide5 = sprites.create(img`
     . . . . . . . . . . . . . . . .
     . . . . . . . . . . . . . . . .
@@ -126,6 +130,7 @@ let guide5 = sprites.create(img`
     . . . . . 1 1 b b 1 1 . . . . .
 `, SpriteKind.guide)
 guide5.setPosition(1495, 312)
+guide5.say("Space Jumps to Get Higher")
 let guide6 = sprites.create(img`
     . . . . . . . . . . . . . . . .
     . . . . . . . . . . . . . . . .
@@ -145,6 +150,7 @@ let guide6 = sprites.create(img`
     . . . . . 1 1 b b 1 1 . . . . .
 `, SpriteKind.guide)
 guide6.setPosition(62, 312)
+guide6.say("Excape the Dungeon to Escape! Watch for Lava and Other Obstacles")
 let Merek_right = img`
     . . . . . . . . . . . . . . . .
     . . . . . . 1 1 1 1 1 . . . . .
@@ -688,7 +694,6 @@ let meany = sprites.create(img`
 tiles.placeOnTile(meany, tiles.getTileLocation(6, 19))
 tiles.placeOnTile(block, tiles.getTileLocation(33, 18))
 block.ay = 200
-meany.say("Plz dont touch me")
 let canDoublejump = true
 controller.moveSprite(Merek, 75, 0)
 controller.player1.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Pressed, function on_jump() {
@@ -803,4 +808,8 @@ let flagpole = sprites.create(img`
 flagpole.setPosition(513, 536)
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function on_flag_grab(sprite: Sprite, otherSprite: Sprite) {
     game.over(true)
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function on_overlap3(sprite: Sprite, otherSprite: Sprite) {
+    coin.destroy()
+    info.changeScoreBy(1)
 })
