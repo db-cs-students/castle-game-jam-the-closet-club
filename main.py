@@ -216,27 +216,27 @@ def on_button_event_a_pressed():
     Merek.vy = -150
 controller.player1.on_button_event(ControllerButton.A, ControllerButtonEvent.PRESSED, on_button_event_a_pressed)
 scene.set_tile_map(img("""
-    cccccccc66666666666666666666666666666666cc.....................ccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-    cccccccc6666666666666666666666666666666ccc......................cccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-    cccccccc66666663666666666666666666666666cc.......................ccccccccccccccccccccccccccccc66666666666666666666666ccc
-    cccccccc66666666666666366666666666666666cc.......................ccccc......ccccccccccccccccc6666666666666666666666666cc
-    cccccccc666666666666666666666666666666666c......................cccc.........cccccccccccccccc6666666666666666666666666cc
-    cccccccc66666666666666666666666666636ccccc......................cccc.........cccccccccccccccc66666cccc6666666666666666cc
-    cccccccc66666666666666666666666666666c6666...................................cccccccccccccccab666cccccc666666666666666cc
-    cccccccc66663666666666666666666666666c.6666..................................cccccccccccccccc6666cccccc666666666666666cc
-    cccccccc66666666636666666666666666666cbbbbb......................ccccc......ccccccccccccccccc6666cccccc666666666666666cc
+    cccccccc666666666666666666666ccccccccccccc.....................ccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+    cccccccc666666666666666666666ccccccccccccc......................cccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+    cccccccc6666666366666666666666cccccccccccc.......................ccccccccccccccccccccccccccccc66666666666666666666666ccc
+    cccccccc66666666666666366666666ccccccccccc.......................ccccc......ccccccccccccccccc6666666666666666666666666cc
+    cccccccc666666666666666666666666cccccccccc......................cccc.........cccccccccccccccc6666666666666666666666666cc
+    cccccccc6666666666666666666666666ccccccccc......................cccc.........cccccccccccccccc66666cccc6666666666666666cc
+    cccccccc66666666666666666666666666cccc6666...................................cccccccccccccccab666cccccc666666666666666cc
+    cccccccc666636666666666666666666666ccc.6666..................................cccccccccccccccc6666cccccc666666666666666cc
+    cccccccc6666666663666666666666666666cabbbbb......................ccccc......ccccccccccccccccc6666cccccc666666666666666cc
     cccccccc6666666663666663666666366666666666.....................cccccccccccccccccccccccccccccc666beccccc666666666666666cc
     cccccccc666666666666666666666666666666666.....bbbb.............cccccccccccccccccccccccccccccc6666cccccc666666666666666cc
     cccccccc663666666666666666666666666666666......1f.....bbbb.....cccccccccccccccccccccccccccccab666cccccc666666666666666cc
-    cccccccc66666666666666666666666666666636.......1f......1f.......ccccccccccccccccccccccccccccc6666cccccc666666666666666cc
+    cccccccc66666666666666666666666666666636.......1f......1f......cccccccccccccccccccccccccccccc6666cccccc666666666666666cc
     cccccccc66666336666663666666666666666633.......1f..bbbb1f......cccccccccccccccccccccccccccccc6666cccccc666666666666666cc
     cccccccc6666663666663666666636666636663........1f...1f.1f......cccccccccccccccccccccccccccccc666beccccc666666666666666cc
     cccccccc66666663666666666666666666366666..bbbbbbbb..1f.1f......ccccccccccccccccccccccccccccc66666cccccc666666666666666cc
-    cccccccc6666666666666666666666666666666....1f..1f...1f.1f.......cc666666666666666cccccccccc666666cccccc666666666666666cc
-    c.8...8.66666666666777777777666666665555...1f..1f...1f.1f.......cc6666666666666666666666666666666cccccc666666666666666cc
-    c.......6666666666becccccccc666666666666...1f..1f...1f.1f........c666666666666666666666666666666cccccca999977777666666cc
-    c...d...666666666beccccccccc6666336666636..1f..1f...1f.1f.........66666666666666666666666666666cccccccabbbbebbbb777666cc
-    abbbbbbbbbbbbbbbbecccccccccc666633666666b..1f..1f...1f.1f.........666666666666666bbbbbbbbbbbbbccccccccccccccccccccc666cc
+    cccccccc6666666666666666666666666666666....1f..1f...1f.1f......ccc666666666666666cccccccccc666666cccccc666666666666666cc
+    c.8...8.66666666666777777777666666665555...1f..1f...1f.1f......ccc6666666666666666666666666666666cccccc666666666666666cc
+    c.......6666666666becccccccc666666666666...1f..1f...1f.1f......ccc666666666666666666666666666666cccccca999977777666666cc
+    c...d...666666666beccccccccc6666336666636..1f..1f...1f.1f......ccc66666666666666666666666666666cccccccabbbbebbbb777666cc
+    abbbbbbbbbbbbbbbbecccccccccc666633666666b..1f..1f...1f.1f......ccc666666666666666bbbbbbbbbbbbbccccccccccccccccccccc666cc
     cccccccccccccccccccccccccccabbbbbbbbbbbbe441f441f4441f41f444444cccbbbbbbbbbbbbbbbcccccccccccccccccccccccccccccccccc666cc
     ccccccccccccccccccccccccccccccccccccccccc221f221f2221f21f222222cccccccccccccccccccccccccccccccccccccccccccccccccccc666cc
     ccccccccccccccccccccccccccccccccccccccccc221f221f2221f21f222222cccccccccccccccccccccccccccccccccccccccccccccccccccc666cc
@@ -245,15 +245,15 @@ scene.set_tile_map(img("""
     ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc...cc
     .cc...................................................................................................................cc
     ......................................................................................................................cc
-    ......................................................................................................................cc
-    ...................................................................................................................bbbcc
-    ..................................................................................................................bccccc
-    .................................................................................................................bcccccc
-    .............................................................................77777777...........................bccccccc
-    ....................................................................777777...cccccccc........777777.......777777cccccccc
-    ....................................................................cccccc444cccccccc44444444cccccc4444444cccccccccccccc
-    ....................................................................cccccc222cccccccc22222222cccccc2222222cccccccccccccc
-    ....................................................................cccccc222cccccccc22222222cccccc2222222cccccccccccccc
+    ........................................................7777..........................................................cc
+    ........................................................cccc.......................................................bbbcc
+    ........................................................cccc..7777................................................bccccc
+    ........................................................cccc..cccc...............................................bcccccc
+    ........................................................cccc..cccc...........77777777...........................bccccccc
+    .....................................77777..............cccc..cccc..777777...cccccccc........777777.......777777cccccccc
+    .....................................ccccc44444444444444cccc44cccc44cccccc444cccccccc44444444cccccc4444444cccccccccccccc
+    .....................................ccccc22222222222222cccc22cccc22cccccc222cccccccc22222222cccccc2222222cccccccccccccc
+    .....................................ccccc22222222222222cccc22cccc22cccccc222cccccccc22222222cccccc2222222cccccccccccccc
     ........................................................................................................................
     ........................................................................................................................
     ........................................................................................................................
