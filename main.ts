@@ -5,6 +5,10 @@ Description: The guy is doing stuff! oh crap!
 
  */
 namespace SpriteKind {
+    export const guide = SpriteKind.create()
+}
+
+namespace SpriteKind {
     export const tunnel = SpriteKind.create()
 }
 
@@ -26,77 +30,198 @@ namespace SpriteKind {
 //      . . . f . . . . . . . f . . . .
 //      . . . . . . . . . . . . . . . .
 //  """), SpriteKind.player)
-let Merek_right = img`
+// Guide
+let guide1 = sprites.create(img`
     . . . . . . . . . . . . . . . .
-    . . . . . . 1 1 1 1 1 . . . . .
-    . . . . . 1 d d d d d 1 . . . .
-    . . . . . 1 d d f d f 1 . . . .
-    . . . . . 1 d d d d d 1 . . . .
-    . . . . . . 1 1 4 1 1 . . . . .
-    . . . . . 1 4 4 4 4 4 1 . . . .
-    . . . . . 1 4 4 4 4 4 1 . . . .
-    . . . . . 1 4 4 4 4 4 1 . . . .
-    . . . . . 1 4 4 4 4 4 1 . . . .
-    . . . . . 1 d f f f d 1 . . . .
-    . . . . . . 1 4 4 4 1 . . . . .
-    . . . . . . 1 4 1 4 1 . . . . .
-    . . . . . . 1 4 1 4 1 . . . . .
-    . . . . . . 1 4 1 4 1 . . . . .
-    . . . . . 1 e e 1 e e 1 . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . 1 1 b b 1 1 . . . . .
+    . . . . . 1 b f f b 1 . . . . .
+    . . . . . b f f f f b . . . . .
+    . . . . . b f f f f b . . . . .
+    . . . . . 1 b f f b 1 . . . . .
+    . . . . . 1 1 b b 1 1 . . . . .
+`, SpriteKind.guide)
+guide1.setPosition(330, 264)
+guide1.say("Keep an Eye Out For Coins!")
+let guide2 = sprites.create(img`
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . 1 1 b b 1 1 . . . . .
+    . . . . . 1 b f f b 1 . . . . .
+    . . . . . b f f f f b . . . . .
+    . . . . . b f f f f b . . . . .
+    . . . . . 1 b f f b 1 . . . . .
+    . . . . . 1 1 b b 1 1 . . . . .
+`, SpriteKind.guide)
+guide2.setPosition(500, 328)
+guide2.say("Push the Box, and Jump on Top When it Finishes Moving")
+let guide3 = sprites.create(img`
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . 1 1 b b 1 1 . . . . .
+    . . . . . 1 b f f b 1 . . . . .
+    . . . . . b f f f f b . . . . .
+    . . . . . b f f f f b . . . . .
+    . . . . . 1 b f f b 1 . . . . .
+    . . . . . 1 1 b b 1 1 . . . . .
+`, SpriteKind.guide)
+guide3.setPosition(895, 168)
+guide3.say("Clearly Nothing This Way....")
+let guide4 = sprites.create(img`
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . 1 1 b b 1 1 . . . . .
+    . . . . . 1 b f f b 1 . . . . .
+    . . . . . b f f f f b . . . . .
+    . . . . . b f f f f b . . . . .
+    . . . . . 1 b f f b 1 . . . . .
+    . . . . . 1 1 b b 1 1 . . . . .
+`, SpriteKind.guide)
+guide4.setPosition(645, 120)
+guide4.say("Look For Holes In the Wall")
+let guide5 = sprites.create(img`
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . 1 1 b b 1 1 . . . . .
+    . . . . . 1 b f f b 1 . . . . .
+    . . . . . b f f f f b . . . . .
+    . . . . . b f f f f b . . . . .
+    . . . . . 1 b f f b 1 . . . . .
+    . . . . . 1 1 b b 1 1 . . . . .
+`, SpriteKind.guide)
+guide5.setPosition(1495, 312)
+guide5.say("Space Jumps to Get Higher")
+let guide6 = sprites.create(img`
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . 1 1 b b 1 1 . . . . .
+    . . . . . 1 b f f b 1 . . . . .
+    . . . . . b f f f f b . . . . .
+    . . . . . b f f f f b . . . . .
+    . . . . . 1 b f f b 1 . . . . .
+    . . . . . 1 1 b b 1 1 . . . . .
+`, SpriteKind.guide)
+guide6.setPosition(62, 312)
+guide6.say("Excape the Dungeon to Escape! Watch for Lava and Other Obstacles")
+let Merek_right = img`
+    . . . . . . . . . . e e . . . .
+    . . . . . . e e e e e e . . . .
+    . . . . . . e d d d d . . . . .
+    . . . . . . d d f d f . . . . .
+    . . . . . . d d d d d . . . . .
+    . . . . . . . . 4 . . . . . . .
+    . . . . . . 4 4 4 4 4 . . . . .
+    . . . . . . 4 4 4 4 4 . . . . .
+    . . . . . . 4 4 4 4 4 . . . . .
+    . . . . . . 4 4 4 4 4 . . . . .
+    . . . . . . d f f f d . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . 4 . 4 . . . . . .
+    . . . . . . . 4 . 4 . . . . . .
+    . . . . . . . 4 . 4 . . . . . .
+    . . . . . . e e . e e . . . . .
 `
 let Merek_left = img`
-    . . . . . . . . . . . . . . . .
-    . . . . . . 1 1 1 1 1 . . . . .
-    . . . . . 1 d d d d d 1 . . . .
-    . . . . . 1 f d f d d 1 . . . .
-    . . . . . 1 d d d d d 1 . . . .
-    . . . . . . 1 1 4 1 1 . . . . .
-    . . . . . 1 4 4 4 4 4 1 . . . .
-    . . . . . 1 4 4 4 4 4 1 . . . .
-    . . . . . 1 4 4 4 4 4 1 . . . .
-    . . . . . 1 4 4 4 4 4 1 . . . .
-    . . . . . 1 d f f f d 1 . . . .
-    . . . . . . 1 4 4 4 1 . . . . .
-    . . . . . . 1 4 1 4 1 . . . . .
-    . . . . . . 1 4 1 4 1 . . . . .
-    . . . . . . 1 4 1 4 1 . . . . .
-    . . . . . 1 e e 1 e e 1 . . . .
+    . . . . . e e . . . . . . . . .
+    . . . . . e e e e e e . . . . .
+    . . . . . . d d d d e . . . . .
+    . . . . . . f d f d d . . . . .
+    . . . . . . d d d d d . . . . .
+    . . . . . . . . 4 . . . . . . .
+    . . . . . . 4 4 4 4 4 . . . . .
+    . . . . . . 4 4 4 4 4 . . . . .
+    . . . . . . 4 4 4 4 4 . . . . .
+    . . . . . . 4 4 4 4 4 . . . . .
+    . . . . . . d f f f d . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . 4 . 4 . . . . . .
+    . . . . . . . 4 . 4 . . . . . .
+    . . . . . . . 4 . 4 . . . . . .
+    . . . . . . e e . e e . . . . .
 `
 let Merek_jump_right = img`
-    . . . . 1 . . . . . . . 1 . . .
-    . . . 1 d 1 1 1 1 1 1 1 d 1 . .
-    . . . 1 4 1 d d d d f 1 4 1 . .
-    . . . 1 4 1 d d f d d 1 4 1 . .
-    . . . 1 4 1 d d d d d 1 4 1 . .
-    . . . . 1 4 1 1 4 1 1 4 1 . . .
-    . . . . . 1 4 4 4 4 4 1 . . . .
-    . . . . . . 1 4 4 4 1 . . . . .
-    . . . . . . 1 4 4 4 1 . . . . .
-    . . . . . . 1 4 4 4 1 . . . . .
-    . . . . . . 1 f f f 1 . . . . .
-    . . . . . . 1 4 4 4 1 . . . . .
-    . . . . 1 1 1 4 1 4 1 . . . . .
-    . . . 1 e 4 4 e 4 1 . . . . . .
-    . . . 1 e 1 1 e 1 . . . . . . .
-    . . . . 1 . . 1 . . . . . . . .
+    . . . . . . . . e e e . . . . .
+    . . . . d . . e e e e . d . . .
+    . . . . 4 . e e d d f . 4 . . .
+    . . . . 4 . e d f d d . 4 . . .
+    . . . . 4 . d d d d d . 4 . . .
+    . . . . . 4 . . 4 . . 4 . . . .
+    . . . . . . 4 4 4 4 4 . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . f f f . . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . 4 . 4 . . . . . .
+    . . . . e 4 4 e 4 . . . . . . .
+    . . . . e . . e . . . . . . . .
+    . . . . . . . . . . . . . . . .
 `
 let Merek_jump_left = img`
-    . . . . 1 . . . . . . . 1 . . .
-    . . . 1 d 1 1 1 1 1 1 1 d 1 . .
-    . . . 1 4 1 f d d d d 1 4 1 . .
-    . . . 1 4 1 d d f d d 1 4 1 . .
-    . . . 1 4 1 d d d d d 1 4 1 . .
-    . . . . 1 4 1 1 4 1 1 4 1 . . .
-    . . . . . 1 4 4 4 4 4 1 . . . .
-    . . . . . . 1 4 4 4 1 . . . . .
-    . . . . . . 1 4 4 4 1 . . . . .
-    . . . . . . 1 4 4 4 1 . . . . .
-    . . . . . . 1 f f f 1 . . . . .
-    . . . . . . 1 4 4 4 1 . . . . .
-    . . . . . . 1 4 1 4 1 1 1 . . .
-    . . . . . . . 1 4 e 4 4 e 1 . .
-    . . . . . . . . 1 e 1 1 e 1 . .
-    . . . . . . . . . 1 . . 1 . . .
+    . . . . . . e e e . . . . . . .
+    . . . . d . e e e e . . d . . .
+    . . . . 4 . f d d e e . 4 . . .
+    . . . . 4 . d d f d e . 4 . . .
+    . . . . 4 . d d d d d . 4 . . .
+    . . . . . 4 . . 4 . . 4 . . . .
+    . . . . . . 4 4 4 4 4 . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . f f f . . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . 4 . 4 . . . . . .
+    . . . . . . . . 4 e 4 4 e . . .
+    . . . . . . . . . e . . e . . .
+    . . . . . . . . . . . . . . . .
 `
 let coin = sprites.create(img`
     . . . . . . . . . . . . . . . .
@@ -184,12 +309,10 @@ let block = sprites.create(img`
     44eefeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
     4eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 `, SpriteKind.Food)
-block.setFlag(SpriteFlag.ShowPhysics, true)
 //  scene.place_on_random_tile(block, 3)
 let Merek = sprites.create(Merek_right, SpriteKind.Player)
 scene.setBackgroundColor(0)
 info.setLife(3)
-Merek.setFlag(SpriteFlag.ShowPhysics, true)
 scene.cameraFollowSprite(Merek)
 controller.moveSprite(Merek, 75, 0)
 let coin1 = sprites.create(img`
@@ -216,47 +339,68 @@ block.ay = 99999
 controller.player1.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Pressed, function on_button_event_a_pressed() {
     Merek.vy = -150
 })
+if (!Merek.isHittingTile(CollisionDirection.Bottom)) {
+    Merek_jump_right = img`
+    . . . . . . . . e e e . . . . .
+    . . . . d . . e e e e . d . . .
+    . . . . 4 . e e d d f . 4 . . .
+    . . . . 4 . e d f d d . 4 . . .
+    . . . . 4 . d d d d d . 4 . . .
+    . . . . . 4 . . 4 . . 4 . . . .
+    . . . . . . 4 4 4 4 4 . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . f f f . . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . 4 . 4 . . . . . .
+    . . . . e 4 4 e 4 . . . . . . .
+    . . . . e . . e . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    `
+}
+
 scene.setTileMap(img`
-    cccccccc66666666666666666666666666666666cc.....................ccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-    cccccccc6666666666666666666666666666666ccc......................cccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-    cccccccc66666663666666666666666666666666cc.......................ccccccccccccccccccccccccccccc66666666666666666666666ccc
-    cccccccc66666666666666366666666666666666cc.......................ccccc......ccccccccccccccccc6666666666666666666666666cc
-    cccccccc666666666666666666666666666666666c......................cccc.........cccccccccccccccc6666666666666666666666666cc
-    cccccccc66666666666666666666666666636ccccc......................cccc.........cccccccccccccccc66666cccc6666666666666666cc
-    cccccccc66666666666666666666666666666c6666...................................cccccccccccccccab666cccccc666666666666666cc
-    cccccccc66663666666666666666666666666c.6666..................................cccccccccccccccc6666cccccc666666666666666cc
-    cccccccc66666666636666666666666666666cbbbbb......................ccccc......ccccccccccccccccc6666cccccc666666666666666cc
-    cccccccc6666666663666663666666366666666666.....................cccccccccccccccccccccccccccccc666beccccc666666666666666cc
-    cccccccc666666666666666666666666666666666.....bbbb.............cccccccccccccccccccccccccccccc6666cccccc666666666666666cc
-    cccccccc663666666666666666666666666666666......1f.....bbbb.....cccccccccccccccccccccccccccccab666cccccc666666666666666cc
-    cccccccc66666666666666666666666666666636.......1f......1f.......ccccccccccccccccccccccccccccc6666cccccc666666666666666cc
+    cccccccc666666666666666666666ccccccccccccc.....................ccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+    cccccccc666666666666666666666ccccccccccccc......................cccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+    cccccccc6666666366666666666666cccccccccccc.......................ccccccccccccccccccccccccccccc66666666666666666666666ccc
+    cccccccc66666666666666366666666ccccccccccc.......................ccccc......ccccccccccccccccc6666666666666666666666666cc
+    cccccccc666666666666666666666666cccccccccc......................cccc.........cccccccccccccccc6666666666366666666666666cc
+    cccccccc6666666666666666666666666ccccccccc......................cccc.........cccccccccccccccc66666cccc6666666666666666cc
+    cccccccc66666666666666666666666666cccc6666...................................cccccccccccccccc6666cccccc666666666666666cc
+    cccccccc666636666666666666666666666ccc.6666..................................cccccccccccccccc6666cccccc666666666666666cc
+    cccccccc6666666663666666666666666666cabbbbb......................ccccc......cccccccccccccccccb666cccccc666666666666666cc
+    cccccccc6666666663666663666666366666666666.....................cccccccccccccccccccccccccccccc6666cccccc666636666666666cc
+    cccccccc666666666666666666666666666666666.....bbbb.............cccccccccccccccccccccccccccccc6366cccccc666666666666666cc
+    cccccccc663666666666666666666666666666666......1f.....bbbb.....cccccccccccccccccccccccccccccc636bcccccc666666666666666cc
+    cccccccc66666666666666666666666666666636.......1f......1f......cccccccccccccccccccccccccccccc6666cccccc666666666666666cc
     cccccccc66666336666663666666666666666633.......1f..bbbb1f......cccccccccccccccccccccccccccccc6666cccccc666666666666666cc
-    cccccccc6666663666663666666636666636663........1f...1f.1f......cccccccccccccccccccccccccccccc666beccccc666666666666666cc
+    cccccccc6666663666663666666636666636663........1f...1f.1f......ccccccccccccccccccccccccccccccb663cccccc666336666666666cc
     cccccccc66666663666666666666666666366666..bbbbbbbb..1f.1f......ccccccccccccccccccccccccccccc66666cccccc666666666666666cc
-    cccccccc6666666666666666666666666666666....1f..1f...1f.1f.......cc666666666666666cccccccccc666666cccccc666666666666666cc
-    c.8...8.66666666666777777777666666665555...1f..1f...1f.1f.......cc6666666666666666666666666666666cccccc666666666666666cc
-    c.......6666666666becccccccc666666666666...1f..1f...1f.1f........c666666666666666666666666666666cccccca999977777666666cc
-    c...d...666666666beccccccccc6666336666636..1f..1f...1f.1f.........66666666666666666666666666666cccccccabbbbebbbb777666cc
-    abbbbbbbbbbbbbbbbecccccccccc666633666666b..1f..1f...1f.1f.........666666666666666bbbbbbbbbbbbbccccccccccccccccccccc666cc
-    cccccccccccccccccccccccccccabbbbbbbbbbbbe441f441f4441f41f444444cccbbbbbbbbbbbbbbbcccccccccccccccccccccccccccccccccc666cc
+    cccccccc6666666666666666666666666666666....1f..1f...1f.1f......ccc666666666666666cccccccccc666666cccccc666666666636666cc
+    c.8...8.66666666666777777777666666665555...1f..1f...1f.1f......ccc6666663366666663666666666666666cccccc666666666636666cc
+    c.......6666666666becccccccc666666666666...1f..1f...1f.1f......ccc666663366666666636666663666666beccccc999977777666666cc
+    c...d...666666666beccccccccc6666336666636..1f..1f...1f.1f......ccc66666666666666666666666666666becccccabbbbecccc777666cc
+    abbbbbbbbbbbbbbbbecccccccccc666633666666b..1f..1f...1f.1f......ccc666666666666666bbbbbbbbbbbbbbeccccccccccccccccccc666cc
+    cccccccccccccccccccccccccccabbbbbbbbbbbbe441f441f4441f41f444444cccbbbbbbbbbbbbbbbeccccccccccccccccccccccccccccccccc666cc
     ccccccccccccccccccccccccccccccccccccccccc221f221f2221f21f222222cccccccccccccccccccccccccccccccccccccccccccccccccccc666cc
-    ccccccccccccccccccccccccccccccccccccccccc221f221f2221f21f222222cccccccccccccccccccccccccccccccccccccccccccccccccccc666cc
-    ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc...cc
-    ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc...cc
-    ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc...cc
-    .cc...................................................................................................................cc
-    ......................................................................................................................cc
-    ......................................................................................................................cc
-    ...................................................................................................................bbbcc
-    ..................................................................................................................bccccc
-    .................................................................................................................bcccccc
-    .............................................................................77777777...........................bccccccc
-    ....................................................................777777...cccccccc........777777.......777777cccccccc
-    ....................................................................cccccc444cccccccc44444444cccccc4444444cccccccccccccc
-    ....................................................................cccccc222cccccccc22222222cccccc2222222cccccccccccccc
-    ....................................................................cccccc222cccccccc22222222cccccc2222222cccccccccccccc
-    ........................................................................................................................
-    ........................................................................................................................
+    ccccccccccccccccccccccccccccccccccccccccc221f221f2221f21f222222cccccccccccccccccccccccccccccccccccccccccccccccccccc663cc
+    ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc666cc
+    ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc666cc
+    ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc666cc
+    .cc..............ccccccccccc666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666cc
+    .................ccccccccccc666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666cc
+    .................ccccccccccc666366666666636666666666663677776666666666666666666663666666666666333666666666666366666666cc
+    .................ccccccccccc6666666666666666666666666366cccc6666666666636666666666666666666666666666666666666666666bbbec
+    .................ccccccccccc6666666663666666666666666666cccc6677776666663666666.6666.66666666666666666666666666666becccc
+    .................ccccccccccc66666666666.66666666666666..cccc66cccc66..6666666666666666666666666666.66666666666666beccccc
+    .................ccccccccccc666666666666666.............cccc.6cccc6..6..66.6.77777777.6....6...6666..666...66666becccccc
+    .................ccccccccccabbbbbbbbb77777.......777....cccc..cccc..777777...cccccccc........777777.......777777eccccccc
+    .................ccccccccccccccccccccccccc4444444ccc4444cccc44cccc44cccccc444cccccccc44444444cccccc4444444cccccccccccccc
+    .................ccccccccccccccccccccccccc22222222cc2222ccc2222ccc222cccc22222cccccc2222222222cccc222222222ccccccccccccc
+    .................cccccccccccccccccccccccc222222222cc2222cc222222c2222ccc2c2222ccccc2222222222222cc2222222222cccccccccccc
+    .................ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+    .................ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
     ........................................................................................................................
     ........................................................................................................................
     ........................................................................................................................
@@ -563,7 +707,6 @@ let meany = sprites.create(img`
 tiles.placeOnTile(meany, tiles.getTileLocation(6, 19))
 tiles.placeOnTile(block, tiles.getTileLocation(33, 18))
 block.ay = 200
-meany.say("Plz dont touch me")
 let canDoublejump = true
 controller.moveSprite(Merek, 75, 0)
 controller.player1.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Pressed, function on_jump() {
@@ -578,10 +721,32 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function on_overlap(sprit
     info.changeLifeBy(-1)
 })
 function on_update() {
+    let Merek_jump_right: Image;
     if (controller.dx() > 0) {
         Merek.setImage(Merek_right)
     } else if (controller.dx() < 0) {
         Merek.setImage(Merek_left)
+    }
+    
+    if (!Merek.isHittingTile(CollisionDirection.Bottom)) {
+        Merek_jump_right = img`
+               . . . . . . . . e e e . . . . .
+               . . . . d . . e e e e . d . . .
+               . . . . 4 . e e d d f . 4 . . .
+               . . . . 4 . e d f d d . 4 . . .
+               . . . . 4 . d d d d d . 4 . . .
+               . . . . . 4 . . 4 . . 4 . . . .
+               . . . . . . 4 4 4 4 4 . . . . .
+               . . . . . . . 4 4 4 . . . . . .
+               . . . . . . . 4 4 4 . . . . . .
+               . . . . . . . 4 4 4 . . . . . .
+               . . . . . . . f f f . . . . . .
+               . . . . . . . 4 4 4 . . . . . .
+               . . . . . . . 4 . 4 . . . . . .
+               . . . . e 4 4 e 4 . . . . . . .
+               . . . . e . . e . . . . . . . .
+               . . . . . . . . . . . . . . . .
+           `
     }
     
 }
@@ -656,4 +821,26 @@ ventout.setPosition(1080, 328)
 //  Vent Mechanic
 sprites.onOverlap(SpriteKind.Player, SpriteKind.tunnel, function on_overlap2(sprite: Sprite, otherSprite: Sprite) {
     tiles.placeOnTile(Merek, tiles.getTileLocation(66, 20))
+})
+let flagpole = sprites.create(img`
+    . . . . . . . 2 2 2 . . . . . .
+    . . . . . . . 2 2 2 2 2 . . . .
+    . . . . . . . 2 2 2 2 2 2 2 . .
+    . . . . . . . 2 2 2 2 2 2 2 . .
+    . . . . . . . 2 2 2 2 2 . . . .
+    . . . . . . . 2 2 2 . . . . . .
+    . . . . . . . 2 b . . . . . . .
+    . . . . . . . 1 b . . . . . . .
+    . . . . . . . 1 b . . . . . . .
+    . . . . . . . 1 b . . . . . . .
+    . . . . . . . 1 b . . . . . . .
+    . . . . . . . 1 b . . . . . . .
+    . . . . . . . 1 b . . . . . . .
+    . . . . . . . 1 b . . . . . . .
+    . . . 5 5 5 5 5 4 4 4 4 4 . . .
+    . . 5 5 5 5 5 5 5 5 5 5 4 4 . .
+`, SpriteKind.Player)
+flagpole.setPosition(513, 536)
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function on_flag_grab(sprite: Sprite, otherSprite: Sprite) {
+    game.over(true)
 })
