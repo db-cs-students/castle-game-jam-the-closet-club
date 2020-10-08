@@ -151,76 +151,76 @@ guide6 = sprites.create(img("""
 guide6.set_position(62, 312)
 guide6.say("Excape the Dungeon to Escape! Watch for Lava and Other Obstacles")
 Merek_right = img("""
-    . . . . . . . . . . . . . . . .
-    . . . . . . 1 1 1 1 1 . . . . .
-    . . . . . 1 d d d d d 1 . . . .
-    . . . . . 1 d d f d f 1 . . . .
-    . . . . . 1 d d d d d 1 . . . .
-    . . . . . . 1 1 4 1 1 . . . . .
-    . . . . . 1 4 4 4 4 4 1 . . . .
-    . . . . . 1 4 4 4 4 4 1 . . . .
-    . . . . . 1 4 4 4 4 4 1 . . . .
-    . . . . . 1 4 4 4 4 4 1 . . . .
-    . . . . . 1 d f f f d 1 . . . .
-    . . . . . . 1 4 4 4 1 . . . . .
-    . . . . . . 1 4 1 4 1 . . . . .
-    . . . . . . 1 4 1 4 1 . . . . .
-    . . . . . . 1 4 1 4 1 . . . . .
-    . . . . . 1 e e 1 e e 1 . . . .
+    . . . . . . . . . . e e . . . .
+    . . . . . . e e e e e e . . . .
+    . . . . . . e d d d d . . . . .
+    . . . . . . d d f d f . . . . .
+    . . . . . . d d d d d . . . . .
+    . . . . . . . . 4 . . . . . . .
+    . . . . . . 4 4 4 4 4 . . . . .
+    . . . . . . 4 4 4 4 4 . . . . .
+    . . . . . . 4 4 4 4 4 . . . . .
+    . . . . . . 4 4 4 4 4 . . . . .
+    . . . . . . d f f f d . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . 4 . 4 . . . . . .
+    . . . . . . . 4 . 4 . . . . . .
+    . . . . . . . 4 . 4 . . . . . .
+    . . . . . . e e . e e . . . . .
 """)
 Merek_left = img("""
-    . . . . . . . . . . . . . . . .
-    . . . . . . 1 1 1 1 1 . . . . .
-    . . . . . 1 d d d d d 1 . . . .
-    . . . . . 1 f d f d d 1 . . . .
-    . . . . . 1 d d d d d 1 . . . .
-    . . . . . . 1 1 4 1 1 . . . . .
-    . . . . . 1 4 4 4 4 4 1 . . . .
-    . . . . . 1 4 4 4 4 4 1 . . . .
-    . . . . . 1 4 4 4 4 4 1 . . . .
-    . . . . . 1 4 4 4 4 4 1 . . . .
-    . . . . . 1 d f f f d 1 . . . .
-    . . . . . . 1 4 4 4 1 . . . . .
-    . . . . . . 1 4 1 4 1 . . . . .
-    . . . . . . 1 4 1 4 1 . . . . .
-    . . . . . . 1 4 1 4 1 . . . . .
-    . . . . . 1 e e 1 e e 1 . . . .
+    . . . . . e e . . . . . . . . .
+    . . . . . e e e e e e . . . . .
+    . . . . . . d d d d e . . . . .
+    . . . . . . f d f d d . . . . .
+    . . . . . . d d d d d . . . . .
+    . . . . . . . . 4 . . . . . . .
+    . . . . . . 4 4 4 4 4 . . . . .
+    . . . . . . 4 4 4 4 4 . . . . .
+    . . . . . . 4 4 4 4 4 . . . . .
+    . . . . . . 4 4 4 4 4 . . . . .
+    . . . . . . d f f f d . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . 4 . 4 . . . . . .
+    . . . . . . . 4 . 4 . . . . . .
+    . . . . . . . 4 . 4 . . . . . .
+    . . . . . . e e . e e . . . . .
 """)
 Merek_jump_right = img("""
-    . . . . 1 . . . . . . . 1 . . .
-    . . . 1 d 1 1 1 1 1 1 1 d 1 . .
-    . . . 1 4 1 d d d d f 1 4 1 . .
-    . . . 1 4 1 d d f d d 1 4 1 . .
-    . . . 1 4 1 d d d d d 1 4 1 . .
-    . . . . 1 4 1 1 4 1 1 4 1 . . .
-    . . . . . 1 4 4 4 4 4 1 . . . .
-    . . . . . . 1 4 4 4 1 . . . . .
-    . . . . . . 1 4 4 4 1 . . . . .
-    . . . . . . 1 4 4 4 1 . . . . .
-    . . . . . . 1 f f f 1 . . . . .
-    . . . . . . 1 4 4 4 1 . . . . .
-    . . . . 1 1 1 4 1 4 1 . . . . .
-    . . . 1 e 4 4 e 4 1 . . . . . .
-    . . . 1 e 1 1 e 1 . . . . . . .
-    . . . . 1 . . 1 . . . . . . . .
+    . . . . . . . . e e e . . . . .
+    . . . . d . . e e e e . d . . .
+    . . . . 4 . e e d d f . 4 . . .
+    . . . . 4 . e d f d d . 4 . . .
+    . . . . 4 . d d d d d . 4 . . .
+    . . . . . 4 . . 4 . . 4 . . . .
+    . . . . . . 4 4 4 4 4 . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . f f f . . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . 4 . 4 . . . . . .
+    . . . . e 4 4 e 4 . . . . . . .
+    . . . . e . . e . . . . . . . .
+    . . . . . . . . . . . . . . . .
 """)
 Merek_jump_left = img("""
-    . . . . 1 . . . . . . . 1 . . .
-    . . . 1 d 1 1 1 1 1 1 1 d 1 . .
-    . . . 1 4 1 f d d d d 1 4 1 . .
-    . . . 1 4 1 d d f d d 1 4 1 . .
-    . . . 1 4 1 d d d d d 1 4 1 . .
-    . . . . 1 4 1 1 4 1 1 4 1 . . .
-    . . . . . 1 4 4 4 4 4 1 . . . .
-    . . . . . . 1 4 4 4 1 . . . . .
-    . . . . . . 1 4 4 4 1 . . . . .
-    . . . . . . 1 4 4 4 1 . . . . .
-    . . . . . . 1 f f f 1 . . . . .
-    . . . . . . 1 4 4 4 1 . . . . .
-    . . . . . . 1 4 1 4 1 1 1 . . .
-    . . . . . . . 1 4 e 4 4 e 1 . .
-    . . . . . . . . 1 e 1 1 e 1 . .
-    . . . . . . . . . 1 . . 1 . . .
+    . . . . . . e e e . . . . . . .
+    . . . . d . e e e e . . d . . .
+    . . . . 4 . f d d e e . 4 . . .
+    . . . . 4 . d d f d e . 4 . . .
+    . . . . 4 . d d d d d . 4 . . .
+    . . . . . 4 . . 4 . . 4 . . . .
+    . . . . . . 4 4 4 4 4 . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . f f f . . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . 4 . 4 . . . . . .
+    . . . . . . . . 4 e 4 4 e . . .
+    . . . . . . . . . e . . e . . .
+    . . . . . . . . . . . . . . . .
 """)
 coin = sprites.create(img("""
     . . . . . . . . . . . . . . . .
@@ -308,12 +308,10 @@ block = sprites.create(img("""
     44eefeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
     4eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 """), SpriteKind.food)
-block.set_flag(SpriteFlag.SHOW_PHYSICS, True)
 # scene.place_on_random_tile(block, 3)
 Merek = sprites.create(Merek_right, SpriteKind.player)
 scene.set_background_color(0)
 info.set_life(3)
-Merek.set_flag(SpriteFlag.SHOW_PHYSICS, True)
 scene.camera_follow_sprite(Merek)
 controller.move_sprite(Merek, 75, 0)
 coin1 = sprites.create(img("""
@@ -339,11 +337,27 @@ Merek.ay = 300
 block.ay = 99999
 def on_button_event_a_pressed():
     Merek.vy = -150
-    if controller.dx() > 0:
-        Merek.set_image(Merek_jump_right)
-    elif controller.dx() < 0:
-        Merek.set_image(Merek_jump_left)
 controller.player1.on_button_event(ControllerButton.A, ControllerButtonEvent.PRESSED, on_button_event_a_pressed)
+if not Merek.is_hitting_tile(CollisionDirection.BOTTOM):
+    Merek_jump_right = img("""
+    . . . . . . . . e e e . . . . .
+    . . . . d . . e e e e . d . . .
+    . . . . 4 . e e d d f . 4 . . .
+    . . . . 4 . e d f d d . 4 . . .
+    . . . . 4 . d d d d d . 4 . . .
+    . . . . . 4 . . 4 . . 4 . . . .
+    . . . . . . 4 4 4 4 4 . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . f f f . . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . 4 . 4 . . . . . .
+    . . . . e 4 4 e 4 . . . . . . .
+    . . . . e . . e . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    """)
+
 scene.set_tile_map(img("""
     cccccccc666666666666666666666ccccccccccccc.....................ccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
     cccccccc666666666666666666666ccccccccccccc......................cccccccccccccccccccccccccccccccccccccccccccccccccccccccc
@@ -710,6 +724,27 @@ def on_update():
         Merek.set_image(Merek_right)
     elif controller.dx() < 0:
        Merek.set_image(Merek_left) 
+    if not Merek.is_hitting_tile(CollisionDirection.BOTTOM):
+        Merek_jump_right = img("""
+               . . . . . . . . e e e . . . . .
+               . . . . d . . e e e e . d . . .
+               . . . . 4 . e e d d f . 4 . . .
+               . . . . 4 . e d f d d . 4 . . .
+               . . . . 4 . d d d d d . 4 . . .
+               . . . . . 4 . . 4 . . 4 . . . .
+               . . . . . . 4 4 4 4 4 . . . . .
+               . . . . . . . 4 4 4 . . . . . .
+               . . . . . . . 4 4 4 . . . . . .
+               . . . . . . . 4 4 4 . . . . . .
+               . . . . . . . f f f . . . . . .
+               . . . . . . . 4 4 4 . . . . . .
+               . . . . . . . 4 . 4 . . . . . .
+               . . . . e 4 4 e 4 . . . . . . .
+               . . . . e . . e . . . . . . . .
+               . . . . . . . . . . . . . . . .
+           """)
+    
+
 game.on_update(on_update)
 
 game.on_update(on_update)
@@ -807,7 +842,3 @@ flagpole.set_position(513, 536)
 def on_flag_grab(sprite, otherSprite):
     game.over(True)
 sprites.on_overlap(SpriteKind.player, SpriteKind.player, on_flag_grab)
-def on_overlap3(sprite, otherSprite):
-    coin.destroy()
-    info.change_score_by(1)
-sprites.on_overlap(SpriteKind.player, SpriteKind.projectile, on_overlap3)

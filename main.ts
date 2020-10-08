@@ -152,76 +152,76 @@ let guide6 = sprites.create(img`
 guide6.setPosition(62, 312)
 guide6.say("Excape the Dungeon to Escape! Watch for Lava and Other Obstacles")
 let Merek_right = img`
-    . . . . . . . . . . . . . . . .
-    . . . . . . 1 1 1 1 1 . . . . .
-    . . . . . 1 d d d d d 1 . . . .
-    . . . . . 1 d d f d f 1 . . . .
-    . . . . . 1 d d d d d 1 . . . .
-    . . . . . . 1 1 4 1 1 . . . . .
-    . . . . . 1 4 4 4 4 4 1 . . . .
-    . . . . . 1 4 4 4 4 4 1 . . . .
-    . . . . . 1 4 4 4 4 4 1 . . . .
-    . . . . . 1 4 4 4 4 4 1 . . . .
-    . . . . . 1 d f f f d 1 . . . .
-    . . . . . . 1 4 4 4 1 . . . . .
-    . . . . . . 1 4 1 4 1 . . . . .
-    . . . . . . 1 4 1 4 1 . . . . .
-    . . . . . . 1 4 1 4 1 . . . . .
-    . . . . . 1 e e 1 e e 1 . . . .
+    . . . . . . . . . . e e . . . .
+    . . . . . . e e e e e e . . . .
+    . . . . . . e d d d d . . . . .
+    . . . . . . d d f d f . . . . .
+    . . . . . . d d d d d . . . . .
+    . . . . . . . . 4 . . . . . . .
+    . . . . . . 4 4 4 4 4 . . . . .
+    . . . . . . 4 4 4 4 4 . . . . .
+    . . . . . . 4 4 4 4 4 . . . . .
+    . . . . . . 4 4 4 4 4 . . . . .
+    . . . . . . d f f f d . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . 4 . 4 . . . . . .
+    . . . . . . . 4 . 4 . . . . . .
+    . . . . . . . 4 . 4 . . . . . .
+    . . . . . . e e . e e . . . . .
 `
 let Merek_left = img`
-    . . . . . . . . . . . . . . . .
-    . . . . . . 1 1 1 1 1 . . . . .
-    . . . . . 1 d d d d d 1 . . . .
-    . . . . . 1 f d f d d 1 . . . .
-    . . . . . 1 d d d d d 1 . . . .
-    . . . . . . 1 1 4 1 1 . . . . .
-    . . . . . 1 4 4 4 4 4 1 . . . .
-    . . . . . 1 4 4 4 4 4 1 . . . .
-    . . . . . 1 4 4 4 4 4 1 . . . .
-    . . . . . 1 4 4 4 4 4 1 . . . .
-    . . . . . 1 d f f f d 1 . . . .
-    . . . . . . 1 4 4 4 1 . . . . .
-    . . . . . . 1 4 1 4 1 . . . . .
-    . . . . . . 1 4 1 4 1 . . . . .
-    . . . . . . 1 4 1 4 1 . . . . .
-    . . . . . 1 e e 1 e e 1 . . . .
+    . . . . . e e . . . . . . . . .
+    . . . . . e e e e e e . . . . .
+    . . . . . . d d d d e . . . . .
+    . . . . . . f d f d d . . . . .
+    . . . . . . d d d d d . . . . .
+    . . . . . . . . 4 . . . . . . .
+    . . . . . . 4 4 4 4 4 . . . . .
+    . . . . . . 4 4 4 4 4 . . . . .
+    . . . . . . 4 4 4 4 4 . . . . .
+    . . . . . . 4 4 4 4 4 . . . . .
+    . . . . . . d f f f d . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . 4 . 4 . . . . . .
+    . . . . . . . 4 . 4 . . . . . .
+    . . . . . . . 4 . 4 . . . . . .
+    . . . . . . e e . e e . . . . .
 `
 let Merek_jump_right = img`
-    . . . . 1 . . . . . . . 1 . . .
-    . . . 1 d 1 1 1 1 1 1 1 d 1 . .
-    . . . 1 4 1 d d d d f 1 4 1 . .
-    . . . 1 4 1 d d f d d 1 4 1 . .
-    . . . 1 4 1 d d d d d 1 4 1 . .
-    . . . . 1 4 1 1 4 1 1 4 1 . . .
-    . . . . . 1 4 4 4 4 4 1 . . . .
-    . . . . . . 1 4 4 4 1 . . . . .
-    . . . . . . 1 4 4 4 1 . . . . .
-    . . . . . . 1 4 4 4 1 . . . . .
-    . . . . . . 1 f f f 1 . . . . .
-    . . . . . . 1 4 4 4 1 . . . . .
-    . . . . 1 1 1 4 1 4 1 . . . . .
-    . . . 1 e 4 4 e 4 1 . . . . . .
-    . . . 1 e 1 1 e 1 . . . . . . .
-    . . . . 1 . . 1 . . . . . . . .
+    . . . . . . . . e e e . . . . .
+    . . . . d . . e e e e . d . . .
+    . . . . 4 . e e d d f . 4 . . .
+    . . . . 4 . e d f d d . 4 . . .
+    . . . . 4 . d d d d d . 4 . . .
+    . . . . . 4 . . 4 . . 4 . . . .
+    . . . . . . 4 4 4 4 4 . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . f f f . . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . 4 . 4 . . . . . .
+    . . . . e 4 4 e 4 . . . . . . .
+    . . . . e . . e . . . . . . . .
+    . . . . . . . . . . . . . . . .
 `
 let Merek_jump_left = img`
-    . . . . 1 . . . . . . . 1 . . .
-    . . . 1 d 1 1 1 1 1 1 1 d 1 . .
-    . . . 1 4 1 f d d d d 1 4 1 . .
-    . . . 1 4 1 d d f d d 1 4 1 . .
-    . . . 1 4 1 d d d d d 1 4 1 . .
-    . . . . 1 4 1 1 4 1 1 4 1 . . .
-    . . . . . 1 4 4 4 4 4 1 . . . .
-    . . . . . . 1 4 4 4 1 . . . . .
-    . . . . . . 1 4 4 4 1 . . . . .
-    . . . . . . 1 4 4 4 1 . . . . .
-    . . . . . . 1 f f f 1 . . . . .
-    . . . . . . 1 4 4 4 1 . . . . .
-    . . . . . . 1 4 1 4 1 1 1 . . .
-    . . . . . . . 1 4 e 4 4 e 1 . .
-    . . . . . . . . 1 e 1 1 e 1 . .
-    . . . . . . . . . 1 . . 1 . . .
+    . . . . . . e e e . . . . . . .
+    . . . . d . e e e e . . d . . .
+    . . . . 4 . f d d e e . 4 . . .
+    . . . . 4 . d d f d e . 4 . . .
+    . . . . 4 . d d d d d . 4 . . .
+    . . . . . 4 . . 4 . . 4 . . . .
+    . . . . . . 4 4 4 4 4 . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . f f f . . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . 4 . 4 . . . . . .
+    . . . . . . . . 4 e 4 4 e . . .
+    . . . . . . . . . e . . e . . .
+    . . . . . . . . . . . . . . . .
 `
 let coin = sprites.create(img`
     . . . . . . . . . . . . . . . .
@@ -309,12 +309,10 @@ let block = sprites.create(img`
     44eefeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
     4eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 `, SpriteKind.Food)
-block.setFlag(SpriteFlag.ShowPhysics, true)
 //  scene.place_on_random_tile(block, 3)
 let Merek = sprites.create(Merek_right, SpriteKind.Player)
 scene.setBackgroundColor(0)
 info.setLife(3)
-Merek.setFlag(SpriteFlag.ShowPhysics, true)
 scene.cameraFollowSprite(Merek)
 controller.moveSprite(Merek, 75, 0)
 let coin1 = sprites.create(img`
@@ -340,13 +338,28 @@ Merek.ay = 300
 block.ay = 99999
 controller.player1.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Pressed, function on_button_event_a_pressed() {
     Merek.vy = -150
-    if (controller.dx() > 0) {
-        Merek.setImage(Merek_jump_right)
-    } else if (controller.dx() < 0) {
-        Merek.setImage(Merek_jump_left)
-    }
-    
 })
+if (!Merek.isHittingTile(CollisionDirection.Bottom)) {
+    Merek_jump_right = img`
+    . . . . . . . . e e e . . . . .
+    . . . . d . . e e e e . d . . .
+    . . . . 4 . e e d d f . 4 . . .
+    . . . . 4 . e d f d d . 4 . . .
+    . . . . 4 . d d d d d . 4 . . .
+    . . . . . 4 . . 4 . . 4 . . . .
+    . . . . . . 4 4 4 4 4 . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . f f f . . . . . .
+    . . . . . . . 4 4 4 . . . . . .
+    . . . . . . . 4 . 4 . . . . . .
+    . . . . e 4 4 e 4 . . . . . . .
+    . . . . e . . e . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    `
+}
+
 scene.setTileMap(img`
     cccccccc666666666666666666666ccccccccccccc.....................ccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
     cccccccc666666666666666666666ccccccccccccc......................cccccccccccccccccccccccccccccccccccccccccccccccccccccccc
@@ -708,10 +721,32 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function on_overlap(sprit
     info.changeLifeBy(-1)
 })
 function on_update() {
+    let Merek_jump_right: Image;
     if (controller.dx() > 0) {
         Merek.setImage(Merek_right)
     } else if (controller.dx() < 0) {
         Merek.setImage(Merek_left)
+    }
+    
+    if (!Merek.isHittingTile(CollisionDirection.Bottom)) {
+        Merek_jump_right = img`
+               . . . . . . . . e e e . . . . .
+               . . . . d . . e e e e . d . . .
+               . . . . 4 . e e d d f . 4 . . .
+               . . . . 4 . e d f d d . 4 . . .
+               . . . . 4 . d d d d d . 4 . . .
+               . . . . . 4 . . 4 . . 4 . . . .
+               . . . . . . 4 4 4 4 4 . . . . .
+               . . . . . . . 4 4 4 . . . . . .
+               . . . . . . . 4 4 4 . . . . . .
+               . . . . . . . 4 4 4 . . . . . .
+               . . . . . . . f f f . . . . . .
+               . . . . . . . 4 4 4 . . . . . .
+               . . . . . . . 4 . 4 . . . . . .
+               . . . . e 4 4 e 4 . . . . . . .
+               . . . . e . . e . . . . . . . .
+               . . . . . . . . . . . . . . . .
+           `
     }
     
 }
@@ -808,8 +843,4 @@ let flagpole = sprites.create(img`
 flagpole.setPosition(513, 536)
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function on_flag_grab(sprite: Sprite, otherSprite: Sprite) {
     game.over(true)
-})
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function on_overlap3(sprite: Sprite, otherSprite: Sprite) {
-    coin.destroy()
-    info.changeScoreBy(1)
 })
